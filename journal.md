@@ -3,6 +3,8 @@
 ## JOURNAL
 
 ### September 17 2026
-**wassup 
 
-//![image]
+
+
+
+![image](./images/website%20screenshot.png)
