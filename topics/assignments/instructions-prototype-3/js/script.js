@@ -54,7 +54,7 @@ function drawChiikawa(){
 function drawHead(){
  push();
  fill(255, 250, 250);
- ellipse(200, 200, 250, 190);
+ ellipse(200, 200, 240, 190);
  pop();
 }
 
@@ -73,33 +73,33 @@ function drawEar2(){
 
 }
 
-// function drawEye1(){
-//     push();
-//     fill(0, 0, 0);
-//     triangle(190,0,200,150,200,0);
-//     pop();
-// }
+function drawEye1(){
+    push();
+    fill(0, 0, 0);
+    circle(247, 185, 25);
+    pop();
+}
 
-// function drawEye2(){
-//     push();
-//     fill(0, 0, 0);
-//     triangle(150,1100,210,540,200,250);
-//     pop();
-// }
+function drawEye2(){
+    push();
+    fill(0, 0, 0);
+    circle(165, 185, 25);
+    pop();
+}
 
-// function drawPupil1(){
-//     push();
-//     fill(255, 255, 255);
-//     circle(200, 200, 25);
-//     pop();
-// }
+function drawPupil1(){
+    push();
+    fill(255, 255, 255);
+    circle(165, 180, 12);
+    pop();
+}
 
-// function drawPupil2(){
-//     push(); 
-//     fill(255, 255, 255);
-//     circle(300, 300, 40);
-//     pop();
-// }
+function drawPupil2(){
+    push(); 
+    fill(255, 255, 255);
+    circle(247, 180, 12);
+    pop();
+}
 
 // function drawEyeShine1(){
 //     push();
