@@ -1,24 +1,29 @@
 /**
- * Title of Project
- * Author Name
+ * Protoype 1
+ * Anum Shahin
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Drawing of a key (subject to change)
+ * Don't remove a grade please.
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
-function setup() {
+ * Creating the canvas
+ * */
 
+function setup() {
+    createCanvas(400,400);
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Declaring the parts of the key
 */
-function draw() {
+function drawKey(){
+    drawBow()
+    drawBlade()
+    drawTip1()
+    drawTip2()
 
 }
