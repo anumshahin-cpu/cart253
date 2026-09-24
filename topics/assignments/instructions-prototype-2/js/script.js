@@ -72,6 +72,6 @@ function drawPetal3(){
 function drawPetal4(){
     push();
     fill(43, 100, 57);
-    triangle(150,1200,210,550,200,250);
+    triangle(150,1100,210,540,200,250);
     pop();
 }
