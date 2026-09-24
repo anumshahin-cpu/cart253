@@ -38,6 +38,7 @@ function drawFlower(){
     drawPetal3();
     drawPetal4();
     drawPetal5();
+    drawPetal6();
 
 }
 
@@ -78,6 +79,13 @@ function drawPetal4(){
 }
 
 function drawPetal5(){
+    push();
+    fill(104, 174, 189);
+    rect(300, 140, 22, 30);
+    pop();
+}
+
+function drawPetal6(){
     push();
     fill(104, 174, 189);
     rect(300, 140, 22, 30);
