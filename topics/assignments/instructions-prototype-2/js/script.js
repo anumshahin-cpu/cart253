@@ -48,31 +48,38 @@ function drawWhorl(){
  pop();
 }
 
-function drawBlade(){
+function drawPetal1(){
     push();
-    fill(218, 165, 32);
+    fill(104, 174, 189);
     rect(195, 190, 15, 100);
     pop();
 }
 
-function drawTip1(){
+function drawPetal2(){
     push();
-    fill(218, 165, 32);
+    fill(104, 174, 189);
     rect(205, 255, 20, 10);
     pop();
 
 }
 
-function drawTip2(){
+function drawPetal3(){
     push();
-    fill(218, 165, 32);
+    fill(104, 174, 189);
     rect(205, 280, 20, 10);
     pop();
 }
 
-function drawHole(){
+function drawPetal4(){
     push();
-    fill(0, 0, 0);
-    circle(200, 125, 22);
+    fill(104, 174, 189);
+    rect(200, 125, 22, 10);
+    pop();
+}
+
+function drawPetal5(){
+    push();
+    fill(104, 174, 189);
+    rect(300, 140, 22, 30);
     pop();
 }
