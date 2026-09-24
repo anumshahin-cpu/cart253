@@ -1,8 +1,8 @@
 /**
- * Protoype 1
+ * Amazing Beautiful Fantastic First Prototype of a Key
  * Anum Shahin
  * 
- * Drawing of a key (subject to change)
+ * Drawing of a key
  * Don't remove a grade please.
  */
 
@@ -56,7 +56,14 @@ function drawBlade(){
 function drawTip1(){
     push();
     fill(218, 165, 32);
-    rect(205, 255, 20, 20);
+    rect(205, 255, 20, 10);
     pop();
 
+}
+
+function drawTip2(){
+    push();
+    fill(218, 165, 32);
+    rect(205, 280, 20, 10);
+    pop();
 }
