@@ -1,8 +1,8 @@
 /**
- * Amazing Beautiful Fantastic Prototype of an Abstract Flower
+ * Amazing Beautiful Fantastic Prototype of an Abstract Clover
  * Anum Shahin
  * 
- * Drawing of a flower, but you know, abstract. 
+ * Drawing of a clover, but you know, abstract. 
  * Don't remove a grade please.
  */
 
@@ -20,18 +20,18 @@ function setup() {
  * Declaring the background
  */
 function draw() {
-    background(149, 185, 199);
+    background(54, 145, 68);
     
     noStroke();
 
-    drawFlower();
+    drawClover();
 }
 
 
 /**
- * Declaring the parts of the flower and creating each part of this drawing
+ * Declaring the parts of the clover and creating each part of this drawing
 */
-function drawFlower(){
+function drawClover(){
     drawWhorl();
     drawPetal1();
     drawPetal2();
@@ -42,36 +42,36 @@ function drawFlower(){
 
 function drawWhorl(){
  push();
- fill(253, 216, 8);
- circle(200, 200, 100);
+ fill(43, 130, 20);
+ circle(200, 200, 25);
  pop();
 }
 
 function drawPetal1(){
     push();
-    fill(104, 174, 189);
-    triangle(105,325,180,325,140,230);
+    fill(43, 100, 57);
+    triangle(400,198,400,209,250,200);
     pop();
 }
 
 function drawPetal2(){
     push();
-    fill(104, 174, 189);
-    triangle(105,325,180,325,140,230);
+    fill(43, 100, 57);
+    triangle(0,210,0,195,155,200);
     pop();
 
 }
 
 function drawPetal3(){
     push();
-    fill(104, 174, 189);
+    fill(43, 100, 57);
     triangle(190,0,200,150,200,0);
     pop();
 }
 
 function drawPetal4(){
     push();
-    fill(104, 174, 189);
+    fill(43, 100, 57);
     triangle(150,1200,210,550,200,250);
     pop();
 }
