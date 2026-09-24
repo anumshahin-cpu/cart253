@@ -1,5 +1,5 @@
 /**
- * Amazing Beautiful Fantastic Prototype of an Abstract Clover
+ * Amazing Beautiful Fantastic Prototype of an Abstract Four Leaf Clover
  * Anum Shahin
  * 
  * Drawing of a clover, but you know, abstract. 
