@@ -1,8 +1,8 @@
 /**
- * Amazing Beautiful Fantastic Prototype of an Abstract Four Leaf Clover
+ * Amazing Beautiful Fantastic Prototype of Chiikawa
  * Anum Shahin
  * 
- * Drawing of a clover, but you know, abstract. 
+ * Drawing of a Chiikawa, a very cute character. 
  * Don't remove a grade please.
  */
 
@@ -24,41 +24,50 @@ function draw() {
     
     noStroke();
 
-    drawClover();
+    drawChiikawa();
 }
 
 
 /**
- * Declaring the parts of the clover and creating each part of this drawing
+ * Declaring the parts of Chiikawa and creating each part of this drawing
 */
-function drawClover(){
-    drawWhorl();
-    drawPetal1();
-    drawPetal2();
-    drawPetal3();
-    drawPetal4();
-    drawCorner1();
-    drawCorner2();
-    drawCorner3();
-    drawCorner4();
+function drawChiikawa(){
+    drawHead();
+    drawEar1();
+    drawEar2();
+    drawEye1();
+    drawEye2();
+    drawPupil1();
+    drawPupil2();
+    drawEyeShine1();
+    drawEyeShine2();
+    drawEyebrow1();
+    drawEyebrow2();
+    drawBlush1();
+    drawBlush2();
+    drawBlushLines1();
+    drawBlushLines2();
+    drawMouthPart1();
+    drawMouthPart2();
+    drawMouthPart3();
 
 }
 
-function drawWhorl(){
+function Head(){
  push();
- fill(43, 130, 20);
+ fill(255, 250, 250);
  circle(200, 200, 25);
  pop();
 }
 
-function drawPetal1(){
+function drawEar1(){
     push();
     fill(43, 100, 57);
     triangle(400,198,400,209,250,200);
     pop();
 }
 
-function drawPetal2(){
+function drawEar2(){
     push();
     fill(43, 100, 57);
     triangle(0,210,0,195,155,200);
@@ -66,14 +75,14 @@ function drawPetal2(){
 
 }
 
-function drawPetal3(){
+function drawEye1(){
     push();
     fill(43, 100, 57);
     triangle(190,0,200,150,200,0);
     pop();
 }
 
-function drawPetal4(){
+function drawEye2(){
     push();
     fill(43, 100, 57);
     triangle(150,1100,210,540,200,250);
