@@ -36,6 +36,7 @@ function drawKey(){
     drawBlade();
     drawTip1();
     drawTip2();
+    drawHole();
 
 }
 
@@ -65,5 +66,12 @@ function drawTip2(){
     push();
     fill(218, 165, 32);
     rect(205, 280, 20, 10);
+    pop();
+}
+
+function drawHole(){
+    push();
+    fill(0, 0, 0);
+    circle(200, 125, 22);
     pop();
 }
