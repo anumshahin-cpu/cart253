@@ -50,14 +50,14 @@ function drawWhorl(){
 function drawPetal1(){
     push();
     fill(104, 174, 189);
-    triangle(195, 190, 15, 100);
+    triangle(105,325,180,325,140,230);
     pop();
 }
 
 function drawPetal2(){
     push();
     fill(104, 174, 189);
-    triangle(205, 255, 20, 10);
+    triangle(105,325,180,325,140,230);
     pop();
 
 }
@@ -65,13 +65,13 @@ function drawPetal2(){
 function drawPetal3(){
     push();
     fill(104, 174, 189);
-    triangle(205, 280, 20, 10);
+    triangle(190,0,200,150,200,0);
     pop();
 }
 
 function drawPetal4(){
     push();
     fill(104, 174, 189);
-    triangle(200, 125, 22, 10);
+    triangle(150,1200,210,550,200,250);
     pop();
 }
