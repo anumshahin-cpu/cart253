@@ -101,19 +101,19 @@ function drawPupil2(){
     pop();
 }
 
-// function drawEyeShine1(){
-//     push();
-//     fill(255, 255, 255);
-//     arc(200, 200, 150, 150, 0, PI);
-//     pop();
-// }
+function drawEyeShine1(){
+    push();
+    fill(255, 255, 255);
+    arc(247, 190, 12, 5, 0, PI);
+    pop();
+}
 
-// function drawEyeShine2(){
-//     push();
-//     fill(255, 255, 255);
-//     arc(200, 200, 150, 150, 0, PI);
-//     pop();
-// }
+function drawEyeShine2(){
+    push();
+    fill(255, 255, 255);
+    arc(165, 190, 12, 5, 0, PI);
+    pop();
+}
 
 // function drawEyebrow1(){
 //     push();
