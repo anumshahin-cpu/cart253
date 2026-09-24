@@ -49,6 +49,14 @@ function drawBow(){
 function drawBlade(){
     push();
     fill(218, 165, 32);
-    rect(195, 175, 15, 100);
+    rect(195, 190, 15, 100);
     pop();
+}
+
+function drawTip1(){
+    push();
+    fill(218, 165, 32);
+    rect(205, 255, 20, 20);
+    pop();
+
 }
