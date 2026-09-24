@@ -1,5 +1,5 @@
 /**
- * Amazing Beautiful Fantastic First Prototype of a Key
+ * Amazing Beautiful Fantastic Prototype of a Key
  * Anum Shahin
  * 
  * Drawing of a key
