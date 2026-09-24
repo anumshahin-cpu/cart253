@@ -33,45 +33,45 @@ function draw(){
 */
 function drawChiikawa(){
     drawHead();
-    // drawEar1();
-    // drawEar2();
-    // drawEye1();
-    // drawEye2();
-    // drawPupil1();
-    // drawPupil2();
-    // drawEyeShine1();
-    // drawEyeShine2();
-    // drawEyebrow1();
-    // drawEyebrow2();
-    // drawBlush1();
-    // drawBlush2();
-    // drawMouthPart1();
-    // drawMouthPart2();
-    // drawMouthPart3();
+    drawEar1();
+    drawEar2();
+    drawEye1();
+    drawEye2();
+    drawPupil1();
+    drawPupil2();
+    drawEyeShine1();
+    drawEyeShine2();
+    drawEyebrow1();
+    drawEyebrow2();
+    drawBlush1();
+    drawBlush2();
+    drawMouthPart1();
+    drawMouthPart2();
+    drawMouthPart3();
 
 }
 
-function Head(){
+function drawHead(){
  push();
  fill(255, 250, 250);
- circle(20, 20, 25);
+ ellipse(200, 200, 250, 190);
  pop();
 }
 
-// function drawEar1(){
-//     push();
-//     fill(255, 250, 250);
-//     triangle(400,198,400,209,250,200);
-//     pop();
-// }
+function drawEar1(){
+    push();
+    fill(255, 250, 250);
+    circle(155, 110, 50);
+    pop();
+}
 
-// function drawEar2(){
-//     push();
-//     fill(255, 250, 250);
-//     triangle(0,210,0,195,155,200);
-//     pop();
+function drawEar2(){
+    push();
+    fill(255, 250, 250);
+    circle(255, 110, 50);
+    pop();
 
-// }
+}
 
 // function drawEye1(){
 //     push();
