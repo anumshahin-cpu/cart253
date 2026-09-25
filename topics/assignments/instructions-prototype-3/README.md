@@ -1,4 +1,4 @@
-# Amazing Beautiful Fantastic Prototype of a Key
+# Amazing Beautiful Fantastic Prototypes
 
 Anum Shahin
 
@@ -6,7 +6,8 @@ Anum Shahin
 
 ## Description
 
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+
+The program used was Visual Studio Code using p5.js to illustrate three different prototypes. With p5.js, it is possible to animate, illustrate, experiment with different colours and angles, and many more.
 
 ## Attribution
 
