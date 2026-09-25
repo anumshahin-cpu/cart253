@@ -54,7 +54,7 @@ function drawChiikawa(){
 function drawHead(){
  push();
  fill(255, 250, 250);
- ellipse(200, 200, 240, 190);
+ ellipse(200, 200, 235, 185);
  pop();
 }
 
@@ -115,20 +115,20 @@ function drawEyeShine2(){
     pop();
 }
 
-// function drawEyebrow1(){
-//     push();
-//     fill(0, 0, 0);
-//     arc(200, 200, 150, 150, 0, PI);
-//     pop();
+function drawEyebrow1(){
+    push();
+    fill(0, 0, 0);
+    arc(167, 150, -15, 3, 0, TWO_PI);
+    pop();
 
-// }
+}
 
-// function drawEyebrow2(){
-//     push();
-//     fill(0, 0, 0);
-//     arc(200, 200, 150, 150, 0, PI);
-//     pop();
-// }
+function drawEyebrow2(){
+    push();
+    fill(0, 0, 0);
+    arc(244, 150, -15, 3, 0, TWO_PI);
+    pop();
+}
 
 // function drawBlush1(){
 //     push();
