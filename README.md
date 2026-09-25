@@ -8,3 +8,8 @@ Welcome! This website is to showcase the prototypes and upload the works that de
 - [Journal](journal.md)
 
 ![banner](./images/banner%202%20cart%202026.png)
+
+## Prototypes
+- [Instructions Prototype 1](https://anumshahin-cpu.github.io/cart253/topics/assignments/instructions-prototype-1/)
+- [Instructions Prototype 2](https://anumshahin-cpu.github.io/cart253/topics/assignments/instructions-prototype-2/)
+- [Instructions Prototype 3](https://anumshahin-cpu.github.io/cart253/topics/assignments/instructions-prototype-3/)
