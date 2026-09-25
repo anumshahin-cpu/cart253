@@ -16,6 +16,7 @@ function setup(){
     createCanvas(400, 400);
 }
 
+
 /**
  * Declaring the background
  */
@@ -54,21 +55,21 @@ function drawChiikawa(){
 function drawHead(){
  push();
  fill(255, 250, 250);
- ellipse(200, 200, 235, 185);
+ ellipse(200, 200, 225, 180);
  pop();
 }
 
 function drawEar1(){
     push();
     fill(255, 250, 250);
-    circle(155, 110, 50);
+    circle(155, 115, 50);
     pop();
 }
 
 function drawEar2(){
     push();
     fill(255, 250, 250);
-    circle(255, 110, 50);
+    circle(255, 115, 50);
     pop();
 
 }
@@ -130,37 +131,35 @@ function drawEyebrow2(){
     pop();
 }
 
-// function drawBlush1(){
-//     push();
-//     fill(227, 157, 169);
-//     ellipse(300, 300, 400);
-//     pop();
-// }
+function drawBlush1(){
+    push();
+    fill(227, 157, 169);
+    ellipse(150, 210, 35, 20);
+    pop();
+}
 
-// function drawBlush2(){
-//     push();
-//     fill(227, 157, 169);
-//     ellipse(300, 300, 400);
-//     pop();
-// }
+function drawBlush2(){
+    push();
+    fill(227, 157, 169);
+    ellipse(257, 210, 35, 20);
+    pop();
+}
 
-// function drawMouthPart1(){
-//     push();
-//     fill(0, 0, 0);
-//     arc(200, 200, 150, 150, 0, PI);
-//     pop();
-// }
+function drawMouthPart1(){
+    push();
+    fill(0, 0, 0);
+    arc(200, 215, 10, 5, -20, PI);
+    pop();
+}
+function drawMouthPart2(){
+    push();
+    fill(0, 0, 0);
+    pop();
+}
 
-// function drawMouthPart2(){
-//     push();
-//     fill(0, 0, 0);
-//     arc(200, 200, 150, 150, 0, PI);
-//     pop();
-// }
-
-// function drawMouthPart3(){
-//     push();
-//     fill(0, 0, 0);
-//     arc(200, 200, 150, 150, 0, PI);
-//     pop();
-// }
+function drawMouthPart3(){
+    push();
+    fill(0, 0, 0);
+    arc(204, 225, 10, 3, 0, PI);
+    pop();
+}
