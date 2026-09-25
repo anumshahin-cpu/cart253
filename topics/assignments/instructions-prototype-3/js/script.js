@@ -154,6 +154,7 @@ function drawMouthPart1(){
 function drawMouthPart2(){
     push();
     fill(0, 0, 0);
+    arc(207, 215, 10, 5,0, PI);
     pop();
 }
 
