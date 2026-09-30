@@ -29,12 +29,19 @@ let sun = {
     }
 }
 
-// //adding a hill variable
-// let hill = {
-//     r: 28,
-//     g: 191,
-//     b: 27
-// }
+//adding a hill variable
+let hill = {
+    // position and size
+    x: 200,
+    y: 550,
+    size: 600,
+    // colour
+    fill: {
+        r: 28,
+        g: 191,
+        b: 27,
+    }
+}
 
 /**
  * Creating a canvas
@@ -54,8 +61,10 @@ function draw() {
     sky.b -= 1;
     sky. r-= 1;
 
-    sun.fill.r -= 1
-    sun.fill.g -= 1
+    sun.fill.r == 1
+    sun.fill.g == 1
+    sun.fill.b += 1
+
 
     push();
     noStroke();
@@ -63,10 +72,18 @@ function draw() {
 
     fill(sun.fill.r, sun.fill.g, sun.fill.b);
 
-    sun.y =+ random (1,1);
-    sun.x += random (1,1);
+    // sun.y =+ random (1,1);
+    // sun.x += random (1,1);
 
     ellipse(sun.x, sun.y, sun.size);
     pop();
+
+    push();
+    rectMode(CENTER)
+    noStroke();
+    fill("darkgreen");
+    ellipse(hill.x, hill.y, hill.size);
+    pop();
+
 
 }
