@@ -1,24 +1,47 @@
 /**
- * Title of Project
- * Author Name
+ * From Day to Night
+ * Anum Shahin
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * The sun rises and then it sets, then it's time for the moon to rise.
+ * I love being graded. Please grade this.
  */
 
 "use strict";
 
+//adding a sky variable
+let sky = {
+    r: 204,
+    g: 255,
+    b: 225
+}
+
+//adding a sun variable
+let sun = {
+    r: 255,
+    g: 255,
+    b: 0
+}
+
+//adding a hill variable
+let hill = {
+    r: 28,
+    g: 191,
+    b: 27
+}
+
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Creating a canvas
 */
 function setup() {
+    createCanvas (400, 400);
 
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Draw and update the landscape
 */
 function draw() {
+    background(sky.r, sky.g, sky.b);
 
 }
