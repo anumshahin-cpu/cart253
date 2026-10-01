@@ -2,7 +2,7 @@
  * Did Anyone Else Like Watching the DVD logo Almost Hit the Corner of the TV? No? Just Me?
  * Anum Shahin
  * 
- * Wow! It's the almost DVD logo! Almost! And it's hitting the corner!
+ * Wow! It's the almost DVD logo! Almost! And it's hitting the corner! Almost!
  * I love being graded. Please grade this.
  * Used Snowflakes created by Aatish Bhatia and revised by Darren Kessner.
  */
