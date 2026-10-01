@@ -34,18 +34,23 @@ let tvscreen = {
     }
 }
 
-// let dvdlogo = {
-//     //position and size
-//     x: 270,
-//     y: 250,
-//     size: 75,
-//     // colour
-//     fill: {
-//         r:0,
-//         g:255,
-//         b:0,
-//     }
-// }
+let dvdlogo = {
+    //position and size
+    x: 100,
+    y: 250,
+    size: 75,
+    // velocity
+    velocity: {
+        x: -2,
+        y: -2,
+    },
+    // colour
+    fill: {
+        r:0,
+        g:255,
+        b:0,
+    }
+}
 
 
 
@@ -69,9 +74,24 @@ function draw() {
     tvborder.b == 1;
     tvborder.r == 1;
 
-    // dvdlogo.g == 1;
-    // dvdlogo.b == 1;
-    // dvdlogo.r == 1;
+
+
+// added a conditional to have the dvd logo bounce inside the tv screen
+    dvdlogo.x += dvdlogo.velocity.x;
+    dvdlogo.y += dvdlogo.velocity.y;
+    if(dvdlogo.x + dvdlogo.size /2> tvscreen.x + tvscreen.size /2){
+        dvdlogo.velocity.x = -dvdlogo.velocity.x
+    }
+    else if(dvdlogo.x - dvdlogo.size /2 <tvscreen.x - tvscreen.size /2){
+        dvdlogo.velocity.x = -dvdlogo.velocity.x
+    }
+    if(dvdlogo.y + dvdlogo.size /2> tvscreen.y + tvscreen.size /2){
+        dvdlogo.velocity.y = -dvdlogo.velocity.y
+    }
+    else if(dvdlogo.y - dvdlogo.size /2 <tvscreen.y - tvscreen.size /2){
+        dvdlogo.velocity.y = -dvdlogo.velocity.y
+    }
+
 
     //drawing tv screen
     push();
@@ -81,14 +101,14 @@ function draw() {
     square(tvscreen.x, tvscreen.y, tvscreen.size);
     pop();
 
-    // //drawing dvd logo
-    // push();
-    // rectMode(CENTER)
-    // noStroke();
-    // fill("lime");
-    // square(dvdlogo.x, dvdlogo.y, dvdlogo.size);
-    // pop();
-    rect(mouseX, mouseY, 75, 75);
+    //drawing dvd logo
+    push();
+    rectMode(CENTER)
+    noStroke();
+    fill("lime");
+    rect(dvdlogo.x, dvdlogo.y, dvdlogo.size);
+    pop();
+    
 
 
 

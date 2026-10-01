@@ -16,3 +16,7 @@ I thought the activity was difficult but very fun to do. I couldn't help but fee
 ![image](./images/screenshot%20of%20key.png)
 ![image](./images/screenshot%20of%20four%20leaf%20clover.png)
 ![image](./images/screenshot%20of%20chiikawa.png)
+
+### October 1 2026
+
+While I was working on this assignment, it was fairly difficult and I had to go through a lot of trial and error to get my prototypes to succeed. I had to go through a ton of hoops to figure out what could work and whether it would fit my vision or not, I ended up completely changing the code for one of my planned variables because I wasn't satisfied with the execution of my idea. For the snowflakes, I ended up using the example code on the p5 website, but I didn't want to completely copy the code so I messed around with it until I was satisfied 
