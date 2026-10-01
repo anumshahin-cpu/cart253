@@ -29,17 +29,17 @@ let sun = {
     }
 }
 
-//adding a hill variable
-let hill = {
+//adding one snowyhill variable
+let snowyhill = {
     // position and size
     x: 200,
     y: 550,
     size: 600,
     // colour
     fill: {
-        r: 28,
-        g: 191,
-        b: 27,
+        r: 225,
+        g: 225,
+        b: 255,
     }
 }
 
@@ -57,13 +57,13 @@ function setup() {
 */
 function draw() {
     background(sky.r, sky.g, sky.b);
-    sky.g -= 1;
-    sky.b -= 1;
-    sky. r-= 1;
+    sky.g == 1;
+    sky.b == 1;
+    sky.r == 1;
 
     sun.fill.r == 1
     sun.fill.g == 1
-    sun.fill.b += 1
+    sun.fill.b == 1
 
 
     push();
@@ -81,8 +81,8 @@ function draw() {
     push();
     rectMode(CENTER)
     noStroke();
-    fill("darkgreen");
-    ellipse(hill.x, hill.y, hill.size);
+    fill("snow");
+    ellipse(snowyhill.x, snowyhill.y, snowyhill.size);
     pop();
 
 
