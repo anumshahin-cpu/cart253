@@ -36,9 +36,9 @@ let tvscreen = {
 
 let dvdlogo = {
     //position and size
-    x: 250,
+    x: 270,
     y: 250,
-    size: 100,
+    size: 75,
     // colour
     fill: {
         r:0,
@@ -55,10 +55,6 @@ let dvdlogo = {
 function setup() {
     createCanvas (400, 400);
 
-    describe(
-        ''
-    )
-
 }
 
 
@@ -67,17 +63,32 @@ function setup() {
  * Draw and update the landscape
 */
 function draw() {
+    //drawing background
     background(tvborder.r, tvborder.g, tvborder.b);
     tvborder.g == 1;
     tvborder.b == 1;
     tvborder.r == 1;
 
+    dvdlogo.g == 1;
+    dvdlogo.b == 1;
+    dvdlogo.r == 1;
+
+    //drawing tv screen
     push();
     rectMode(CENTER)
     noStroke();
     fill("black");
     square(tvscreen.x, tvscreen.y, tvscreen.size);
     pop();
+
+    //drawing dvd logo
+    push();
+    rectMode(CENTER)
+    noStroke();
+    fill("lime");
+    square(dvdlogo.x, dvdlogo.y, dvdlogo.size);
+    pop();
+
 
 
 
