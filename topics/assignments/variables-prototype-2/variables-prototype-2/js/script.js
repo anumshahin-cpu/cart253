@@ -1,8 +1,8 @@
 /**
- * A Snowy Night
+ * Snowstorm?
  * Anum Shahin
  * 
- * Wow! It's snowing!
+ * Wow! It's snowing! Pretty heavily too. Uh oh.
  * I love being graded. Please grade this.
  * Used Snowflakes created by Aatish Bhatia and revised by Darren Kessner.
  */
@@ -63,7 +63,7 @@ function draw() {
     sky.r == 1;
 
     // update and display each snowflake in the array
-    let currentTime = frameCount / 60;
+    let currentTime = frameCount / 4;
 
     for (let flake of snowflakes) {
         // update each snowflake position and display
@@ -89,17 +89,17 @@ function draw() {
 class Snowflake {
     constructor () {
         this.posX = 0;
-        this.posY = random (-height, 0);
+        this.posY = random (-height, 19);
         this.initialAngle = random (0, 360);
-        this.size = random (2, 5);
+        this.size = random (2, 7);
         this.radius = sqrt (random(pow(width/2, 2)));
-        this.color = color(random(200, 256), random (200, 256), random (200, 256));
+        this.color = color(random(225, 225), random (225, 256), random (225, 225));
     }
 
     update(time) {
     // define angulaar speed (degrees/second)
 
-    let angularSpeed = 35;
+    let angularSpeed = 40;
 
     // calculate current angle
     let angle = this.initialAngle + angularSpeed * time;
@@ -109,7 +109,7 @@ class Snowflake {
 
     // different size snowflakes fall at different y speeds
 
-    let ySpeed = 8 / this.size;
+    let ySpeed = 10 / this.size;
     this.posY += ySpeed;
 
     // when snowflake reaches the bottom, move it to the top
