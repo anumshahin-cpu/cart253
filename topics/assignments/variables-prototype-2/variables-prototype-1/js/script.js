@@ -72,7 +72,7 @@ function setup() {
 // create snowflake objects
 for (let i = 0; i < 300; i++) {
     // add a new snowflake object to the array
-    snowflakes.push (new snowflakes());
+    snowflakes.push(new Snowflake());
 }
 // create screen reader accessible description
 describe ('Snowflakes falling on a black background.');
@@ -155,7 +155,7 @@ class Snowflake {
 
     // different size snowflakes fall at different y speeds
 
-    let ySpeed = 8/ this.size;
+    let ySpeed = 8 / this.size;
     this.posY += ySpeed;
 
     // when snowflake reaches the bottom, move it to the top
