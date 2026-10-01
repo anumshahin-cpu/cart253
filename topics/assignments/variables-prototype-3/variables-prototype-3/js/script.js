@@ -9,8 +9,12 @@
 
 "use strict";
 
+// adding value 
+let value = 0;
+
 //adding a tv border variable
 let tvborder = {
+    //colour
     r: 128,
     g: 128,
     b: 128,
@@ -18,9 +22,29 @@ let tvborder = {
 
 //adding a tv screen variable
 let tvscreen = {
+    //position and size
+    x: 200,
+    y: 200,
+    size: 320,
+    // colour
+    fill: {
     r: 0,
     g: 0,
     b: 0,
+    }
+}
+
+let dvdlogo = {
+    //position and size
+    x: 250,
+    y: 250,
+    size: 100,
+    // colour
+    fill: {
+        r:0,
+        g:255,
+        b:0,
+    }
 }
 
 
@@ -30,6 +54,10 @@ let tvscreen = {
 */
 function setup() {
     createCanvas (400, 400);
+
+    describe(
+        ''
+    )
 
 }
 
