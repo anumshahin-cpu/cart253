@@ -19,19 +19,6 @@ let sky = {
 // adding array to hold snowflake objects
 let snowflakes = [];
 
-// //adding a sun variable
-// let sun = {
-//     // position and size
-//     x: 200,
-//     y: 100,
-//     size: 100,
-//     // colour
-//     fill: {
-//     r: 255,
-//     g: 255,
-//     b: 0
-//     }
-// }
 
 //adding one snowyhill variable
 let snowyhill = {
@@ -47,20 +34,6 @@ let snowyhill = {
     }
 }
 
-// //adding snowflake variables
-// let snowflake1 = {
-//     //position and size
-//     x: 10,
-//     y: -400,
-//     size: 100,
-//     speed: 1,
-//     // colour
-//     fill: {
-//         r: 255,
-//         g: 250,
-//         b: 250,
-//     }
-// };
 /**
  * Creating a canvas
 */
@@ -97,25 +70,6 @@ function draw() {
         flake.update(currentTime);
         flake.display();
     }
-
-    // sun.fill.r == 1
-    // sun.fill.g == 1
-    // sun.fill.b == 1
-
-
-    // push();
-    // noStroke();
-    // fill(sun.fill.r, sun.fill.g, sun.fill.b);
-
-    // fill(sun.fill.r, sun.fill.g, sun.fill.b);
-
-    // sun.y =+ random (1,1);
-    // sun.x += random (1,1);
-
-    // snowflake1.y += snowfllake1.speed;
-
-    // ellipse(sun.x, sun.y, sun.size);
-    // pop();
 
 
 
