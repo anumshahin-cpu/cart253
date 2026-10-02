@@ -5,6 +5,7 @@
  * Wow! It's snowing! Pretty heavily too. Uh oh.
  * I love being graded. Please grade this.
  * Used Snowflakes created by Aatish Bhatia and revised by Darren Kessner.
+ * https://p5js.org/examples/Classes-And-Objects-Snowflakes/ website used.
  */
 
 "use strict";
@@ -47,8 +48,6 @@ for (let i = 0; i < 300; i++) {
     // add a new snowflake object to the array
     snowflakes.push(new Snowflake());
 }
-// create screen reader accessible description
-describe ('Snowflakes falling on a black background.');
 }
 
 
@@ -72,7 +71,7 @@ function draw() {
     }
 
 
-
+    // draw the snowyhill
     push();
     rectMode(CENTER)
     noStroke();
@@ -97,7 +96,7 @@ class Snowflake {
     }
 
     update(time) {
-    // define angulaar speed (degrees/second)
+    // define angular speed (degrees/second)
 
     let angularSpeed = 40;
 
@@ -107,16 +106,18 @@ class Snowflake {
     // x position follows a sine wave
     this.posX = width / 2 + this.radius * sin(angle);
 
-    // different size snowflakes fall at different y speeds
+    // different size snowflakes fall at different speeds and heights
 
     let ySpeed = 10 / this.size;
     this.posY += ySpeed;
 
-    // when snowflake reaches the bottom, move it to the top
+    // when snowflake reaches the bottom, it gets sent back to the top of the screen
     if (this.posY > height) {
         this.posY = -50;
     }
 }
+
+// colour of the snowflakes
 display() {
     fill(this.color);
     noStroke();
