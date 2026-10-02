@@ -23,4 +23,4 @@ While I was working on this assignment, it was fairly difficult and I had to go 
 
 ![image](./images/day%20and%20night%20prototype.png)
 ![image](./images/snowflakes.png)
-![image](./images/website%20screenshot.png)
+![image](./images/screenshot%20of%20tv.png)
