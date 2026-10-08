@@ -16,7 +16,7 @@ let drop = undefined;
  * Create the canvas
 */
 function setup() {
-    createCanvas (400, 400);
+    createCanvas (400, 200);
 
     // pick random number for probability
 
@@ -29,15 +29,15 @@ function setup() {
 
     // rare option, 10% of the time
     if (p < 0.1) {
-        drop = "You become insanely wealthy and healthy, and you accomplish all your dreams, woah!";
+        drop = "You accomplish all your dreams, woah!";
     }
     // kind of rare, 20% of the time
     else if (p <0.21){
-        drop = "You're living a good life! You have a good job, good friends and family, and you're happy where you are right now. Pretty cool!"
+        drop = "A good life! You're happy where you are right now. Pretty cool!"
     }
     // uncommon, 30% of the time
     else if (p < 0.51){
-        drop = "Not so bad. Your life's kinda mid, but there's worse out there so it's okay I guess."
+        drop = "Kinda mid, but there's worse out there so it's okay I guess."
     }
 
     // common
@@ -53,7 +53,14 @@ function setup() {
  * // drawing the background and the three lights
 */
 function draw() {
-    background("#000000");
+    background("palevioletred");
+
+    //display loot
+    push();
+    textAlign(CENTER, BASELINE);
+    textStyle(BOLD);
+    textSize(13);
+    text(drop, width/2, height/2);
 
 
    
