@@ -85,7 +85,7 @@ function draw() {
     const dyellow = dist(userCircle.x, userCircle.y, yellowCircle.x, yellowCircle.y);
     const overlap = (d < userCircle.size/2 + redCircle.size/2);
    const overlapgreen = (dgreen < userCircle.size/2 + greenCircle.size/2);
-    const overlapyellow (dyellow < userCircle.size/2 + yellowCircle.size/2);
+    const overlapyellow = (dyellow < userCircle.size/2 + yellowCircle.size/2);
     // set fill based on whether they overlap
     if (overlap) {
         redCircle.fill = redCircle.fills.overlap;
