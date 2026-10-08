@@ -78,20 +78,6 @@ function draw() {
 
     // check overlap
 
-    // // calculate distance between circles
-    // const d = dist(userCircle.x, userCircle.y, redCircle.x, redCircle.y, greenCircle.x, greenCircle.y, yellowCircle.x, yellowCircle.y);
-    // const overlap = (d < userCircle.size/2 + redCircle.size/2 + greenCircle.size/2 + yellowCircle.size/2);
-    // // set fill based on whether they overlap
-    // if (overlap) {
-    //     redCircle.fill = redCircle.fills.overlap;
-    //     greenCircle.fill = greenCircle.fills.overlap;
-    //     yellowCircle.fill = yellowCircle.fills.overlap;
-    // }
-    // else {
-    //     redCircle.fill = redCircle.fills.noOverlap;
-    //     greenCircle.fill = greenCircle.fills.noOverlap;
-    //     yellowCircle.fill = yellowCircle.fills.noOverlap;
-    // }
 
     // calculate distance between circles
     const d = dist(userCircle.x, userCircle.y, redCircle.x, redCircle.y);
