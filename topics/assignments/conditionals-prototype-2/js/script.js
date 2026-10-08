@@ -1,71 +1,94 @@
 /**
- * Seal Your Fate!
+ * Imaginary Technique: Hollow Purple
  * Anum Shahin
  * 
- * Probability is funny isn't it? See how you end up in life! You could have a great life, or you could also just die! Who knows?
+ * This is all one big reference, if I'm being honest. 
  * Let the grading begin!
  */
 
 "use strict";
 
-// put the random fortune in here
-let drop = undefined;
+// add a circle that'll move across the screen
+let circle = {
+    // position and size
+    x: 0,
+    y: 250,
+    size: 300,
+    // movement
+    velocity: {
+        x: 0,
+        y: 0
+    },
+    speed: 3,
+};
 
+// title and ending text
+let titleString = "Take the amplified and the reversal, and smash together those two different infinities to create and push out imaginary mass..."
+let endingString = "Imaginary Technique: Hollow Purple"
+
+// display title when program runs
+let state = "title";
 
 /**
  * Create the canvas
 */
 function setup() {
-    createCanvas (500, 200);
+    createCanvas (500, 500);
 
-    // pick random number for probability
-
-    const p = random();
-
-    // rarest option, wonder what this one's for? 1% of the time
-    if (p < 0.01) {
-        drop = "Uh... you ran into an error?"
-    }
-
-    // rarer option, and the worst one, 5% of the time
-    if (p < 0.05) {
-        drop = "Immediate Execution."
-    }
-
-    // rare option, 10% of the time
-    if (p < 0.1) {
-        drop = "You accomplish all your dreams, woah!";
-    }
-    // kind of rare, 20% of the time
-    else if (p <0.21){
-        drop = "A good life! You're happy where you are right now. Pretty cool!"
-    }
-    // uncommon, 30% of the time
-    else if (p < 0.51){
-        drop = "Mid life, but there's worse out there so it's okay. I guess."
-    }
-
-    // common
-    else {
-        drop = "Well... at least you're not dead?"
-    }
-
-
+    textSize(16);
+    textAlign(CENTER, BASELINE);
 }
 
 
 /**
- * // drawing the background and the three lights
+ * // drawing the backgriybd and running the state
 */
 function draw() {
-    background("palevioletred");
+    // call appropriate function
+    if (state === "title"){
+        title();
+    }
+    else if (state === "animation"){
+        animation();
+    }
+    else if (state === "ending"){
+        ending();
+    }
 
-    //display loot
-    push();
-    textAlign(CENTER, BASELINE);
-    textStyle(BOLD);
-    textSize(16);
-    text(drop, width/2, height/2);
+    // display title and waits for user to press mouse
+
+    function title() {
+        background("#ff0000");
+        
+        push();
+        fill("#ffffff");
+        text(titleString, width / 2, height / 2)
+        pop();
+
+        if (mouseIsPressed){
+            state = "animation";
+            circle.velocity.x = circle.speed;
+        }
+    }
+
+    // animates the circle, changes accordingly when circle reaches the end of the canvas
+
+    function animation(){
+        background ("#0000ff");
+
+        // move the circle
+        circle.x += circle.velocity.x;
+        circle.y += circle.velocity.y;
+
+        // draw circle
+        push();
+        noStroke();
+        fill("#9b59b6");
+        ellipse(circle.x, circle.y, circle.size);
+        pop();
+
+        // see if circle reaches edge of canvas
+    }
 
 
    
