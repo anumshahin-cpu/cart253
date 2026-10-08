@@ -8,11 +8,20 @@
 
 "use strict";
 
+// const board = {
+//     // position and size
+//     x: 350,
+//     y: 200,
+//     size: 150,
+//     // colour
+//     fill: "#000000" 
+// };
+
 const redCircle = {
     // position and size
     x: 200,
     y: 200,
-    size: 50,
+    size: 100,
     // colours
     fill: "#545454", // starting with grey
     fills: {
@@ -23,9 +32,9 @@ const redCircle = {
 
 const greenCircle = {
     // position and size
-    x: 100,
+    x: 70,
     y: 200,
-    size: 50,
+    size: 100,
     // colours
     fill: "#545454", // start as grey
     fills: {
@@ -36,9 +45,9 @@ const greenCircle = {
 
 const yellowCircle = {
     // position and size
-    x: 300,
+    x: 330,
     y: 200,
-    size: 50,
+    size: 100,
     // colours
     fill: "#545454", // starting with grey
     fills: {
@@ -53,6 +62,7 @@ const yellowCircle = {
 function setup() {
     createCanvas (400, 400);
 
+
     noCursor();
 
 }
@@ -62,12 +72,20 @@ function setup() {
  * // drawing the background, the three lights, and the board
 */
 function draw() {
-    background("#87cefa");
+    background("#000000");
 
-    // draw board
-    push();
-    noStroke();
-    fill()
+    // // draw circles
+    // drawredCircle();
+    // drawgreenCircle();
+    // drawyellowCircle();
+
+    // // draw board
+    // push();
+    // rectMode(CENTER)
+    // noStroke();
+    // fill(board.fill);
+    // rect(board.x, board.y, board.size);
+    // pop();
 
 
     // draw red circle
