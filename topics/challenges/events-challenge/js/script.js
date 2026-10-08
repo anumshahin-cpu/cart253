@@ -35,6 +35,7 @@ function draw() {
   if (score >= 10){
     gameOver = true;
   }
+  
 }
 
 /**
@@ -51,6 +52,32 @@ function displayUI() {
   }
   displayScore();
 }
+
+function lose() {
+  // if(keyPressed){
+  //   push();
+  //   textsize(48);
+  //   textStyle(BOLD);
+  //   textAlign(CENTER, CENTER);
+  //   text 
+  // }
+  gameOver = true;
+}
+
+function keyPressed(){
+  lose()
+}
+
+function keyReleased(){
+  lose()
+}
+
+function keyTyped(){
+  lose()
+}
+
+
+
 
 /**
  * Display the score
