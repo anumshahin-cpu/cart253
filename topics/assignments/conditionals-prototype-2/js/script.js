@@ -16,14 +16,19 @@ let drop = undefined;
  * Create the canvas
 */
 function setup() {
-    createCanvas (400, 200);
+    createCanvas (500, 200);
 
     // pick random number for probability
 
     const p = random();
 
-    // rarest option, and the worst one, 1% of the time
+    // rarest option, wonder what this one's for? 1% of the time
     if (p < 0.01) {
+        drop = "Uh... you ran into an error?"
+    }
+
+    // rarer option, and the worst one, 5% of the time
+    if (p < 0.05) {
         drop = "Immediate Execution."
     }
 
@@ -37,7 +42,7 @@ function setup() {
     }
     // uncommon, 30% of the time
     else if (p < 0.51){
-        drop = "Kinda mid, but there's worse out there so it's okay I guess."
+        drop = "Mid life, but there's worse out there so it's okay. I guess."
     }
 
     // common
@@ -59,7 +64,7 @@ function draw() {
     push();
     textAlign(CENTER, BASELINE);
     textStyle(BOLD);
-    textSize(13);
+    textSize(16);
     text(drop, width/2, height/2);
 
 
