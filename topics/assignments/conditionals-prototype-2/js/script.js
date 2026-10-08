@@ -19,7 +19,7 @@ let circle = {
         x: 0,
         y: 0
     },
-    speed: 5,
+    speed: 7,
 };
 
 // title and ending text
