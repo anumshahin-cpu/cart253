@@ -24,7 +24,7 @@ function setup() {
 
     // rarest option, wonder what this one's for? 1% of the time
     if (p < 0.01) {
-        drop = "Uh... you ran into an error?"
+        drop = "Uh... I didn't think you'd actually get this?"
     }
 
     // rarer option, and the worst one, 5% of the time
@@ -55,7 +55,7 @@ function setup() {
 
 
 /**
- * // drawing the background and the three lights
+ * // drawing the background and added the display for the loot
 */
 function draw() {
     background("palevioletred");
