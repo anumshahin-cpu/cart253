@@ -88,7 +88,15 @@ function draw() {
         pop();
 
         // see if circle reaches edge of canvas
+        if (circle.x > width){
+            // if so, switch to ending
+            state = "ending";
+        }
     }
+
+    // display ending text
+
+    
 
 
    
