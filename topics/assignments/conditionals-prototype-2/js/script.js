@@ -29,6 +29,8 @@ let endingString = "Imaginary Technique: Hollow Purple"
 // display title when program runs
 let state = "title";
 
+let clickable = true
+
 /**
  * Create the canvas
 */
@@ -40,9 +42,7 @@ function setup() {
     if (state === "title") {
         textSize(20);
         textAlign(CENTER, CENTER);
-        textWrap(WORD);
-
-        text(titleString, 150, 200, 200);
+    
     }
     else if (state === "ending") {
         textsize(20);
@@ -53,7 +53,7 @@ function setup() {
 
 
 /**
- * // drawing the backgriybd and running the state
+ * // drawing the background and running the state
 */
 function draw() {
     // call appropriate function
@@ -67,6 +67,12 @@ function draw() {
         ending();
     }
 
+    // making the switch,,, not switch
+
+    function switchclickable(){
+        clickable = !clickable
+    }
+
     // display title and waits for user to press mouse
 
     function title() {
@@ -77,9 +83,11 @@ function draw() {
         text(titleString, width / 2, height / 2)
         pop();
 
-        if (mouseIsPressed){
-            state = "animation";
-            circle.velocity.x = circle.speed;
+        if (mouseIsPressed&&clickable){
+            clickable = false
+            setTimeout(switchclickable, 1000)
+            state = "ending";
+            
         }
     }
 
@@ -99,11 +107,11 @@ function draw() {
         ellipse(circle.x, circle.y, circle.size);
         pop();
 
-        // see if circle reaches edge of canvas
-        if (circle.x > width){
-            // if so, switch to ending
-            state = "ending";
-        }
+        // // see if circle reaches edge of canvas
+        // if (circle.x > width){
+        //     // if so, switch to ending
+        //     state = "ending";
+        // }
     }
 
     // display ending text
@@ -114,6 +122,11 @@ function draw() {
         fill("#ffffff");
         text(endingString, width /2, height/2)
         pop();
+
+        if (mouseIsPressed&&clickable){
+            state = "animation"
+            circle.velocity.x = circle.speed;
+        }
     }
 
 
