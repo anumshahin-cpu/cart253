@@ -24,3 +24,11 @@ While I was working on this assignment, it was fairly difficult and I had to go 
 ![image](./images/day%20and%20night%20prototype.png)
 ![image](./images/snowflakes.png)
 ![image](./images/screenshot%20of%20tv.png)
+
+### October 8 2026
+
+I found this assignment pretty complicated at first, especially in regards to the first prototype I did. The first prototype I did was supposed to represent traffic lights and I had struggled because instead of having the colours pop up when you hovered over each of them, you could only hover over the red light, and then all of the lights would light up instead of just the red circle. I couldn't figure out what was wrong with it so I waited until studio time during class to get some help and found that I had missed something fairly simple and it was a pretty easy fix so it felt pretty worth it to see my vision come to life. I was glad I asked for help instead of mulling over it myself. The same goes for my second prototype because I wanted my animation to come last and I wanted the title first, the ending screen second, and the animation last. I asked for help again, and it took a bit of trial and error to actually make it work, and it was a bit more complicated than I thought it would be, but I was happy that I could get the results I wanted instead of settling for what I had previously. The last prototype was probably the silliest one I had worked on, it was a lot of fun to do the different loot options and come up with different ideas I could put into it. I liked playing around with the percentages and adding more options. It wasn't too difficult for me to do either which I felt pretty happy about because I had a harder time understanding the other two, but this was one was simpler and easy for me to get. I didn't have to rely on something that I didn't learn this time for any of them so I felt pretty proud of myself after finishing the assignment.
+
+![image](./images/traffic%20lights%20screenshot.png)
+![image](./images/screenshot%20of%20hollow%20purple.png)
+![image](./images/screenshot%20of%20seal%20your%20fate.png)
