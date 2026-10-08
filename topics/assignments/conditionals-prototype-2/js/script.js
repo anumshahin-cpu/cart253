@@ -64,4 +64,31 @@ function setup() {
 function draw() {
     background("#87cefa");
 
+    // draw board
+    push();
+    noStroke();
+    fill()
+
+
+    // draw red circle
+    push();
+    noStroke();
+    fill(redCircle.fill);
+    ellipse(redCircle.x, redCircle.y, redCircle.size);
+    pop();
+
+    // draw green circle
+    push();
+    noStroke();
+    fill(greenCircle.fill);
+    ellipse(greenCircle.x, greenCircle.y, greenCircle.size);
+    pop();
+
+    // draw yellow circle
+    push();
+    noStroke();
+    fill(yellowCircle.fill);
+    ellipse(yellowCircle.x, yellowCircle.y, yellowCircle.size);
+    pop();
+
 }
