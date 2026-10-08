@@ -1,24 +1,28 @@
 /**
- * Title of Project
- * Author Name
+ * Traffic Lights!
+ * Anum Shahin
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Three traffic lights, what happens when you hover over them I wonder?
+ * Let the grading begin!
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Create the canvas
 */
 function setup() {
+    createCanvas (400, 400);
+
+    noCursor();
 
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * // drawing the background, the three lights, and the board
 */
 function draw() {
+    background("#87cefa");
 
 }
