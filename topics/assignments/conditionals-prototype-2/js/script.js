@@ -96,7 +96,13 @@ function draw() {
 
     // display ending text
 
-    
+    function ending() {
+        background("#9b59b6");
+        push();
+        fill("#ffffff");
+        text(endingString, width /2, height/2)
+        pop();
+    }
 
 
    
