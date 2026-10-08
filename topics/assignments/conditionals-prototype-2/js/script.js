@@ -8,6 +8,45 @@
 
 "use strict";
 
+const redCircle = {
+    // position and size
+    x: 200,
+    y: 200,
+    size: 50,
+    // colours
+    fill: "#545454", // starting with grey
+    fills: {
+        noOverlap: "#545454", // dark grey for no overlap
+        overlap: "#ff0000" // red for overlap
+    }
+};
+
+const greenCircle = {
+    // position and size
+    x: 100,
+    y: 200,
+    size: 50,
+    // colours
+    fill: "#545454", // start as grey
+    fills: {
+        noOverlap: "#545454", // dark grey for no overlap
+        overlap: "00ff00" // green for overlap
+    }
+};
+
+const yellowCircle = {
+    // position and size
+    x: 300,
+    y: 200,
+    size: 50,
+    // colours
+    fill: "#545454", // starting with grey
+    fills: {
+        noOverlap: "#545454", // dark grey for no overlap
+        overlap: "#ffff00" // yellow for overlap
+    }
+
+}
 /**
  * Create the canvas
 */
