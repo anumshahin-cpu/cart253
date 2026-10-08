@@ -47,3 +47,21 @@ Welcome! This website is to showcase the prototypes and upload the works that de
 [website!](https://anumshahin-cpu.github.io/cart253/topics/assignments/variables-prototype-3/variables-prototype-3/)
 [code!](https://github.com/anumshahin-cpu/cart253/blob/main/topics/assignments/variables-prototype-3/variables-prototype-3/js/script.js)
 
+### Traffic Lights!
+![image](./images/traffic%20lights%20screenshot.png)
+
+[website!](https://anumshahin-cpu.github.io/cart253/topics/assignments/conditionals-prototype-1/)
+[code!](https://github.com/anumshahin-cpu/cart253/blob/main/topics/assignments/conditionals-prototype-1/js/script.js)
+
+### Imaginary Technique: Hollow Purple 
+![image](./images/screenshot%20of%20hollow%20purple.png)
+
+[website!](https://anumshahin-cpu.github.io/cart253/topics/assignments/conditionals-prototype-2/)
+[code!](https://github.com/anumshahin-cpu/cart253/blob/main/topics/assignments/conditionals-prototype-2/js/script.js)
+
+### Seal Your Fate!
+![image](./images/screenshot%20of%20seal%20your%20fate.png)
+
+[website!](https://anumshahin-cpu.github.io/cart253/topics/assignments/conditionals-prototype-3/)
+[code!](https://github.com/anumshahin-cpu/cart253/blob/main/topics/assignments/conditionals-prototype-3/js/script.js)
+
