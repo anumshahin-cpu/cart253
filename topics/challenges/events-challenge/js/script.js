@@ -76,6 +76,25 @@ function keyTyped(){
   lose()
 }
 
+function mouseMoved(){
+  lose()
+}
+
+function mouseClicked(){
+  lose()
+}
+
+function mousePressed(){
+  lose()
+}
+
+function mouseWheel(){
+  lose()
+}
+
+function mouseReleased(){
+  lose()
+}
 
 
 
