@@ -8,19 +8,12 @@
 
 "use strict";
 
-// const board = {
-//     // position and size
-//     x: 350,
-//     y: 200,
-//     size: 150,
-//     // colour
-//     fill: "#000000" 
-// };
+
 
 const redCircle = {
     // position and size
-    x: 200,
-    y: 200,
+    x: 70,
+    y: 150,
     size: 100,
     // colours
     fill: "#545454", // starting with grey
@@ -32,21 +25,21 @@ const redCircle = {
 
 const greenCircle = {
     // position and size
-    x: 70,
-    y: 200,
+    x: 330,
+    y: 150,
     size: 100,
     // colours
     fill: "#545454", // start as grey
     fills: {
         noOverlap: "#545454", // dark grey for no overlap
-        overlap: "00ff00" // green for overlap
+        overlap: "#00ff00" // green for overlap
     }
 };
 
 const yellowCircle = {
     // position and size
-    x: 330,
-    y: 200,
+    x: 200,
+    y: 150,
     size: 100,
     // colours
     fill: "#545454", // starting with grey
@@ -56,37 +49,78 @@ const yellowCircle = {
     }
 
 }
+
+const userCircle = {
+    x: undefined, // will be mouseX
+    y: undefined, // will be mouseY
+    size: 5,
+    fill: "#ffffff"
+};
+
 /**
  * Create the canvas
 */
 function setup() {
-    createCanvas (400, 400);
-
-
-    noCursor();
+    createCanvas (400, 300);
 
 }
 
 
 /**
- * // drawing the background, the three lights, and the board
+ * // drawing the background and the three lights
 */
 function draw() {
     background("#000000");
 
-    // // draw circles
-    // drawredCircle();
-    // drawgreenCircle();
-    // drawyellowCircle();
+    // move user circle
+    userCircle.x = mouseX;
+    userCircle.y = mouseY;
 
-    // // draw board
-    // push();
-    // rectMode(CENTER)
-    // noStroke();
-    // fill(board.fill);
-    // rect(board.x, board.y, board.size);
-    // pop();
+    // check overlap
 
+    // // calculate distance between circles
+    // const d = dist(userCircle.x, userCircle.y, redCircle.x, redCircle.y, greenCircle.x, greenCircle.y, yellowCircle.x, yellowCircle.y);
+    // const overlap = (d < userCircle.size/2 + redCircle.size/2 + greenCircle.size/2 + yellowCircle.size/2);
+    // // set fill based on whether they overlap
+    // if (overlap) {
+    //     redCircle.fill = redCircle.fills.overlap;
+    //     greenCircle.fill = greenCircle.fills.overlap;
+    //     yellowCircle.fill = yellowCircle.fills.overlap;
+    // }
+    // else {
+    //     redCircle.fill = redCircle.fills.noOverlap;
+    //     greenCircle.fill = greenCircle.fills.noOverlap;
+    //     yellowCircle.fill = yellowCircle.fills.noOverlap;
+    // }
+
+    // calculate distance between circles
+    const d = dist(userCircle.x, userCircle.y, redCircle.x, redCircle.y);
+    dist(userCircle.x, userCircle.y, greenCircle.x, greenCircle.y);
+    dist(userCircle.x, userCircle.y, yellowCircle.x, yellowCircle.y);
+    const overlap = (d < userCircle.size/2 + redCircle.size/2);
+    (d < userCircle.size/2 + greenCircle.size/2);
+    (d < userCircle.size/2 + yellowCircle.size/2);
+    // set fill based on whether they overlap
+    if (overlap) {
+        redCircle.fill = redCircle.fills.overlap;
+    }
+    else {
+        redCircle.fill = redCircle.fills.noOverlap;
+    }
+    if (overlap) {
+        greenCircle.fill = greenCircle.fills.overlap;
+    }
+    else {
+        greenCircle.fill = greenCircle.fills.noOverlap;
+    }
+    if (overlap) {
+        yellowCircle.fill = yellowCircle.fills.overlap;
+    }
+    else {
+        yellowCircle.fill = yellowCircle.fills.noOverlap;
+    }
+
+    
 
     // draw red circle
     push();
