@@ -19,11 +19,11 @@ let circle = {
         x: 0,
         y: 0
     },
-    speed: 3,
+    speed: 5,
 };
 
 // title and ending text
-let titleString = "Take the amplified and the reversal, and smash together those two different infinities to create and push out imaginary mass..."
+let titleString = "Take the amplified and the reversal,\nand smash together those two different infinities\n to create and push out imaginary mass..."
 let endingString = "Imaginary Technique: Hollow Purple"
 
 // display title when program runs
@@ -35,8 +35,20 @@ let state = "title";
 function setup() {
     createCanvas (500, 500);
 
-    textSize(16);
-    textAlign(CENTER, BASELINE);
+    // attempting to wrap the text for the title 
+
+    if (state === "title") {
+        textSize(20);
+        textAlign(CENTER, CENTER);
+        textWrap(WORD);
+
+        text(titleString, 150, 200, 200);
+    }
+    else if (state === "ending") {
+        textsize(20);
+        textAlign(CENTER, CENTER);
+    }
+    
 }
 
 
