@@ -1,116 +1,132 @@
 /**
- * Remember That Game Reaxxion? Well Here's the Knockoff!
+ * Traffic Lights!
  * Anum Shahin
  * 
- * I live in nostalgia and I haven't been able to play Reaxxion in forever so this is the next best thing.
- * Let the grading begin!!!
+ * Three traffic lights, what happens when you hover over them I wonder?
+ * Let the grading begin!
  */
 
 "use strict";
 
-const ball = {
+
+
+const redCircle = {
+    // position and size
+    x: 70,
+    y: 150,
+    size: 100,
+    // colours
+    fill: "#545454", // starting with grey
+    fills: {
+        noOverlap: "#545454", // dark grey for no overlap
+        overlap: "#ff0000" // red for overlap
+    }
+};
+
+const greenCircle = {
+    // position and size
+    x: 330,
+    y: 150,
+    size: 100,
+    // colours
+    fill: "#545454", // start as grey
+    fills: {
+        noOverlap: "#545454", // dark grey for no overlap
+        overlap: "#00ff00" // green for overlap
+    }
+};
+
+const yellowCircle = {
     // position and size
     x: 200,
-    y: 200,
-    size: 50,
-    // colour
-    fill: {
-        r: 128,
-        g: 128,
-        b: 128,
+    y: 150,
+    size: 100,
+    // colours
+    fill: "#545454", // starting with grey
+    fills: {
+        noOverlap: "#545454", // dark grey for no overlap
+        overlap: "#ffff00" // yellow for overlap
     }
-};
 
-const user = {
+}
+
+const userCircle = {
     x: undefined, // will be mouseX
     y: undefined, // will be mouseY
-    w: 75,
-    h: 55,
-    fill: {
-        r: 128,
-        g: 128,
-        b: 128,
-    }
+    size: 5,
+    fill: "#ffffff"
 };
 
 /**
- * // create the canvas!!
+ * Create the canvas
 */
 function setup() {
-    createCanvas(400, 400);
+    createCanvas (400, 300);
 
-};
-
-rectMode(CENTER);
+}
 
 
 /**
- * drawing the background, the board, and the ball
+ * // drawing the background and the three lights
 */
 function draw() {
-    background("#000000")
+    background("#000000");
 
-    // move user rectangle
-    moveBall();
-    moveUser();
+    // move user circle
+    userCircle.x = mouseX;
+    userCircle.y = mouseY;
 
-    // draw user and ball
-    drawBall();
-    drawUser();
-
-}
-
-// sets user position to mouse position
-function moveUser() {
-    user.x = mouseX;
-    user.y = mouseY;
-}
+    // check overlap
 
 
-function moveBall(){
-    const d = dist(user.x, user.y, ball.x, ball.y);
-    // const overlap = (d < user.size / 2 + ball.size / 2);
-    const overlap = (userRect.x + userRect.w / 2 > ball.x - ball.y / 2)
-        (user.x - user.w/2 < ball.x + ball.size/2)
-        (user.y + user.h/2 < ball.y + ball.size/2)
-        (user.y - user.h/2 < ball.y + ball.size/2
-    )
+    // calculate distance between circles
+    const d = dist(userCircle.x, userCircle.y, redCircle.x, redCircle.y);
+    dist(userCircle.x, userCircle.y, greenCircle.x, greenCircle.y);
+    dist(userCircle.x, userCircle.y, yellowCircle.x, yellowCircle.y);
+    const overlap = (d < userCircle.size/2 + redCircle.size/2);
+    (d < userCircle.size/2 + greenCircle.size/2);
+    (d < userCircle.size/2 + yellowCircle.size/2);
+    // set fill based on whether they overlap
+    if (overlap) {
+        redCircle.fill = redCircle.fills.overlap;
+    }
+    else {
+        redCircle.fill = redCircle.fills.noOverlap;
+    }
+    if (overlap) {
+        greenCircle.fill = greenCircle.fills.overlap;
+    }
+    else {
+        greenCircle.fill = greenCircle.fills.noOverlap;
+    }
+    if (overlap) {
+        yellowCircle.fill = yellowCircle.fills.overlap;
+    }
+    else {
+        yellowCircle.fill = yellowCircle.fills.noOverlap;
+    }
+
     
 
-
-    if(overlap){
-
-        if(user.x < ball.x){
-            ball.x += 1;
-        }
-        if(user.x > ball.x){
-            ball.x -= 1;
-         }
-         if(user.y < ball.y){
-            ball.y += 1;
-         }
-         if(user.y > ball.y){
-            ball.y -= 1;
-         }
-    }
-};
-
-// displays the user rectangle
-
-function drawUser() {
+    // draw red circle
     push();
     noStroke();
-    fill(user.fill);
-    rect(user.x, user.y, user.w, user.h)
+    fill(redCircle.fill);
+    ellipse(redCircle.x, redCircle.y, redCircle.size);
     pop();
-};
 
-// displays the ball circle
-
-function drawBall(){
+    // draw green circle
     push();
     noStroke();
-    fill(ball.fill);
-    ellipse(ball.x, ball.y, ball.size);
+    fill(greenCircle.fill);
+    ellipse(greenCircle.x, greenCircle.y, greenCircle.size);
     pop();
+
+    // draw yellow circle
+    push();
+    noStroke();
+    fill(yellowCircle.fill);
+    ellipse(yellowCircle.x, yellowCircle.y, yellowCircle.size);
+    pop();
+
 }
