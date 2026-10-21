@@ -25,7 +25,16 @@ const button = {
 
 }
 
-// load sound effect
+
+// // set a timer
+
+// let time = 10 * 1000
+
+// // game ends after 10 seconds
+
+// let gameOver = false;
+
+// // load sound effect
 
 async function preload(){
     button.soundEffect = await loadSound("assets/sounds/explosion.wav");
@@ -50,7 +59,7 @@ async function setup() {
  * display button
 */
 function draw() {
-    background ("#cceeff");
+    background ("#000080");
 
     // button
     push ();
@@ -80,3 +89,51 @@ function mouseReleased() {
 
 }
 
+// function displayUI(){
+//     if (gameOver) {
+//         push();
+//         fill("#ffffff");
+//         textSize(64);
+//         textStyle(BOLD);
+//         textAlign(CENTER, CENTER);
+//         text("YOU DIED", width/2, height/2);
+//         pop();
+
+//         push();
+//         fill("#ffffff");
+//         textSize(22);
+//         textAlign(CENTER,BOTTOM);
+//         text("Seriously, what were you thinking? I told you not to press it.")
+//     }
+// }
+
+// // death screen
+
+// function drawGameOver() {
+//     push();
+//     fill("#ffffff");
+//     textSize(64);
+//     textStyle(BOLD);
+//     textAlign(CENTER, CENTER);
+//     text("YOU DIED", width/2, height/2);
+//     pop();
+
+//     push();
+//     fill("#ffffff");
+//     textSize(24);
+//     textStyle(BOLD);
+//     textAlign(CENTER, BOTTOM);
+//     text("Seriously, what were you thinking? I told you not to press it.")
+// }
+
+// function lose(){
+//     gameOver = true;
+// }
+
+// function mousePressed(){
+//     lose()
+// }
+
+// function mouseReleased(){
+//     lose()
+// }
