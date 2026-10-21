@@ -28,7 +28,7 @@ const button = {
 // load sound effect
 
 async function preload(){
-    button.soundEffect = await loadSound ("assets/sounds/explosion.wav");
+    button.soundEffect = await loadSound("assets/sounds/explosion.wav");
 }
 
 
@@ -36,16 +36,27 @@ async function preload(){
 /**
  * Create canvas 
 */
-function setup() {
-    createCanvas(500, 500)
+async function setup() {
+    createCanvas(500, 500);
+
+    await preload();
+
+    button.soundEffect.rate(0.8);
 
 }
 
 
 /**
- * Draw background and display UI
+ * display button
 */
 function draw() {
-    background ("#cceeff")
+    background ("#cceeff");
+
+    // button
+    push ();
+    noStroke();
+    fill(button.fill);
+    ellipse(button.x,button.y,button.size);
+    pop();
 
 }
