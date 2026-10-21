@@ -2,7 +2,7 @@
  * Do NOT Press The Button
  * Anum Shahin
  * 
- * Oops, there's a typical red button on your screen, what happens if you press it? I don't recommend it. It might explode, what happens if you just wait instead?
+ * Oops, there's a typical red button on your screen, what happens if you press it? I don't recommend it. 
  * Grade please.
  */
 
@@ -35,6 +35,9 @@ const button = {
 // let gameOver = false;
 
 // // load sound effect
+
+// // add death screen
+// let deathScreen = false;
 
 async function preload(){
     button.soundEffect = await loadSound("assets/sounds/explosion.wav");
@@ -88,6 +91,16 @@ function mouseReleased() {
     button.fill = button.fills.unpressed;
 
 }
+
+// function drawDeathScreen(){
+//     if (mousePressed){
+//         push();
+//         textSize(BOLD);
+//         textAlign(CENTER, CENTER);
+//         text("YOU DIED", width/2, height/2);
+//         pop();
+//     }
+// }
 
 // function displayUI(){
 //     if (gameOver) {
