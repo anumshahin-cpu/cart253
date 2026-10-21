@@ -60,3 +60,15 @@ function draw() {
     pop();
 
 }
+
+// check if button is clicked to play the sound
+
+function mousePressed(){
+    // check if click is inside the button
+    const d = dist(mouseX, mouseY, button.x, button.y);
+    const overlap = (d <button.size/2);
+    if (overlap) {
+        button.soundEffect.play();
+        
+    }
+}
