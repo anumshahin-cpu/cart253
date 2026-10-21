@@ -39,6 +39,8 @@ const button = {
 // // add death screen
 // let deathScreen = false;
 
+// load sound effect
+
 async function preload(){
     button.soundEffect = await loadSound("assets/sounds/explosion.wav");
 }
