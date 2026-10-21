@@ -18,7 +18,7 @@ const button = {
     fill: "#ff0000",
     fills:{
         unpressed: "#ff0000",
-        pressed: "#dc143c"
+        pressed: "#8b0000"
     },
     // explosion sound effect 
     soundEffect: undefined
@@ -69,6 +69,14 @@ function mousePressed(){
     const overlap = (d <button.size/2);
     if (overlap) {
         button.soundEffect.play();
+        button.fill = button.fills.pressed;
         
     }
 }
+
+// make button unpressed
+function mouseReleased() {
+    button.fill = button.fills.unpressed;
+
+}
+
