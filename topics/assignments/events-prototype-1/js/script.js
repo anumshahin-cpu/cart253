@@ -1,24 +1,26 @@
 /**
- * Knockoff Geometry Dash
+ * Do NOT Press The Button
  * Anum Shahin
  * 
- * That game Geometry Dash, but really bad, and simple.
+ * Oops, there's a typical red button on your screen, what happens if you press it? I don't recommend it.
  * Grade please.
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Create canvas 
 */
 function setup() {
+    createCanvas(500, 500)
 
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Draw background and display UI
 */
 function draw() {
+    background ("#cceeff")
 
 }
