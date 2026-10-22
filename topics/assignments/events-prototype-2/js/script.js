@@ -96,7 +96,7 @@ function draw() {
     if (gameOver) {
         drawBall();
     }
-        // if over
+        // i actually don't know why this part works, it doesn't work otherwise
     else {
         drawScore();
         }
