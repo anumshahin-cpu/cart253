@@ -16,6 +16,14 @@ const bg = {
         green: "#6ca865",
         pink: "#e6a5b2",
         orange: "#ea8112"
+    },
+
+    // keys to control the colour
+    keys: {
+        blackKey: 66, // B
+        greenKey: 71, // G
+        pinkKey: 80, // P
+        orangeKey: 79 // O
     }
 }
 
@@ -49,21 +57,20 @@ function draw() {
 
 // }
 
-// make it possible for the colours to change after typing a specific key
+// controls the background's colour
 
 function keyPressed(event){
-    if (event.keyCode === 66){
+    if (event.keyCode === bg.keys.blackKey){
         bg.fill = bg.fills.black;
     }
-    
-    else if (event.keyCode === 71){
+    else if (event.keyCode === bg.keys.greenKey){
         bg.fill = bg.fills.green;
     }
-    else if (event.keyCode === 80){
+    else if (event.keyCode === bg.keys.pinkKey){
         bg.fill = bg.fills.pink;
     }
-    else if (event.keyCode === 79) {
-        bg.fill = bg.fills.pink;
+    else if (event.keyCode === bg.keys.orangeKey) {
+        bg.fill = bg.fills.orange;
     }
 
 }
