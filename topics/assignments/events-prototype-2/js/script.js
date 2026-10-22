@@ -19,7 +19,8 @@ const ball = {
     delay: 500 // how long before ball changes position
 };
 
-
+// current score
+let score = 0;
 
 // set a timer
 
@@ -28,6 +29,8 @@ let gameTime = 20 * 1000
 // game ends after 20 seconds
 
 let gameOver = false;
+
+let BallCollected = false;
 
 // load sound effect
 
@@ -68,7 +71,7 @@ function resetBall(){
 
 // starts the timer that will end the game
 function startGameOverTimer(){
-    setInterval(resetGame, gameTime);
+    setTimeout(resetGame, gameTime);
 }
 
 // ending the game
@@ -90,16 +93,26 @@ function draw() {
     ellipse(ball.x,ball.y,ball.size);
     pop();
 
-    // // if game isn't over, draw current ball
-    // if (!gameOver) {
-    //     drawBall();
-    // }
-    //     // if it is over, add game over message
-    // else {
-    //     drawGameOver();
-    //     }
+    // if game is over, draw current ball
+    if (gameOver) {
+        drawBall();
+    }
+        // if over
+    else {
+        drawScore();
+        }
     }
 
+    // displays current score at top left 
+    function drawScore(){
+        push();
+        fill("#ffffff");
+        textSize(24);
+        textStyle(BOLD);
+        textAlign(CENTER, CENTER);
+        text(score, width/8, height/8);
+        pop();
+    }
 
 
 
@@ -110,25 +123,22 @@ function mousePressed(){
     const d = dist(mouseX, mouseY, ball.x, ball.y);
     const overlap = (d <ball.size/2);
     if (overlap) {
+        ball.collectSFX.play();
+        score++;
+
+
         
         
     }
 }
 
 
-function drawGameOver() {
-    push();
-    fill("#ffffff");
-    textSize(64);
-    textStyle(BOLD);
-    textAlign(CENTER, CENTER);
-    text("YOU DIED", width/2, height/2);
-    pop();
-
-    push();
-    fill("#ffffff");
-    textSize(24);
-    textStyle(BOLD);
-    textAlign(CENTER, BOTTOM);
-    text("Seriously, what were you thinking? I told you not to press it.")
-}
+// function drawBallCollected() {
+//     push();
+//     fill("#ffffff");
+//     textSize(64);
+//     textStyle(BOLD);
+//     textAlign(CENTER, CENTER);
+//     text("YOU WON!", width/2, height/2);
+//     pop();
+// }
