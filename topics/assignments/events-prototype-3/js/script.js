@@ -42,7 +42,6 @@ function setup() {
     
 }
 
-
 /**
  * draw background
 */
