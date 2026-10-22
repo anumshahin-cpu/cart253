@@ -1,48 +1,27 @@
 /**
- * Do NOT Press The Button
+ * Can't Catch Me!
  * Anum Shahin
  * 
- * Oops, there's a typical red button on your screen, what happens if you press it? I don't recommend it. 
+ * 
  * Grade please.
  */
 
 "use strict";
 
-// create your button
-const button = {
-    // position and size
-    x: 250,
-    y: 250,
-    size: 250,
-    // colours
-    fill: "#ff0000",
-    fills:{
-        unpressed: "#ff0000",
-        pressed: "#8b0000"
-    },
-    // explosion sound effect 
-    soundEffect: undefined
-
-}
 
 
-// // set a timer
+// set a timer
 
-// let time = 10 * 1000
+let gameTime = 20 * 1000
 
-// // game ends after 10 seconds
+// game ends after 20 seconds
 
-// let gameOver = false;
-
-// // load sound effect
-
-// // add death screen
-// let deathScreen = false;
+let gameOver = false;
 
 // load sound effect
 
 async function preload(){
-    button.soundEffect = await loadSound("assets/sounds/explosion.wav");
+    ball.collectSFX = await loadSound("assets/sounds/collect.wav");
 }
 
 
@@ -55,22 +34,22 @@ async function setup() {
 
     await preload();
 
-    button.soundEffect.rate(0.8);
+    ball.collectSFX.rate(0.8);
 
 }
 
 
 /**
- * display button
+ * display ball
 */
 function draw() {
-    background ("#000080");
+    background ("#eea1d3");
 
-    // button
+    // ball
     push ();
     noStroke();
-    fill(button.fill);
-    ellipse(button.x,button.y,button.size);
+    fill(ball.fill);
+    ellipse(ball.x,ball.y,ball.size);
     pop();
 
 }
@@ -80,19 +59,18 @@ function draw() {
 function mousePressed(){
     // check if click is inside the button
     const d = dist(mouseX, mouseY, button.x, button.y);
-    const overlap = (d <button.size/2);
+    const overlap = (d <ball.size/2);
     if (overlap) {
-        button.soundEffect.play();
-        button.fill = button.fills.pressed;
+        
         
     }
 }
 
-// make button unpressed
-function mouseReleased() {
-    button.fill = button.fills.unpressed;
+// // make button unpressed
+// function mouseReleased() {
+//     button.fill = button.fills.unpressed;
 
-}
+// }
 
 // function drawDeathScreen(){
 //     if (mousePressed){
