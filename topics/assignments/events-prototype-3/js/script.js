@@ -10,7 +10,7 @@
 
 // create background and add other colours
 const bg = {
-    fill: "#000000",
+    fill: "#4d4d4d",
     fills: {
         black: "#000000",
         green: "#6ca865",
@@ -32,7 +32,7 @@ function setup() {
     createCanvas (500,500);
 
     
-    
+    // window.addEventListener ("keydown", changeBG);
 }
 
 
@@ -40,5 +40,20 @@ function setup() {
  * draw background
 */
 function draw() {
-    background ("#000000");
+    background (bg.fill);
+
+    
 }
+
+// function changeBG(){
+
+// }
+
+function keyPressed(event){
+    if (event.key === "b"){
+
+    }
+    bg.fill = bg.fills.black;
+
+}
+
