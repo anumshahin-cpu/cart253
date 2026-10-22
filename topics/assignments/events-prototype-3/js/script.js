@@ -40,7 +40,6 @@ function setup() {
     createCanvas (500,500);
 
     
-    // window.addEventListener ("keydown", changeBG);
 }
 
 
@@ -52,8 +51,6 @@ function draw() {
 
     
 }
-
-// function changeBG(){
 
 // }
 
@@ -75,3 +72,30 @@ function keyPressed(event){
 
 }
 
+function endSequence(){
+    sequenceEnd = true;
+}
+
+function falseSequence(){
+    sequenceFalse = true;
+}
+
+function drawEndSequence(){
+    push();
+    fill("#870a0a");
+    textSize(64);
+    textStyle(BOLD);
+    textAlign(CENTER, CENTER);
+    text("GOOD JOB!", width/2, height/2);
+    pop();
+}
+
+function drawFalseSequence(){
+    push();
+    fill("#3216be");
+    textSize(64);
+    textStyle(BOLD);
+    textAlign(CENTER, CENTER);
+    text("TRY AGAIN", width/2, height/2);
+    pop();
+}
