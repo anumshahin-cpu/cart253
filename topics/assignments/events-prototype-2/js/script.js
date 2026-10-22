@@ -16,6 +16,7 @@ const ball = {
     size: 25,
     fill: "#71af80",
     collectSFX: undefined, // to be loaded
+    delay: 1000 // how long before ball changes position
 };
 
 
@@ -60,6 +61,16 @@ function resetBall(){
     ball.y = random(ball.size/2, height - ball.size/2);
 }
 
+// starts the timer that will end the game
+function startGameOverTimer(){
+    setInterval(endGame, gameTime);
+}
+
+// ending the game
+
+function endGame(){
+    gameOver = true;
+}
 
 /**
  * display ball
@@ -79,8 +90,8 @@ function draw() {
 // check if button is clicked to play the sound
 
 function mousePressed(){
-    // check if click is inside the button
-    const d = dist(mouseX, mouseY, button.x, button.y);
+    // check if click is inside the ball
+    const d = dist(mouseX, mouseY, ball.x, ball.y);
     const overlap = (d <ball.size/2);
     if (overlap) {
         
