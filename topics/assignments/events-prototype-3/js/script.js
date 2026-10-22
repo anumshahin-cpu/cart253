@@ -1,24 +1,44 @@
 /**
- * Title of Project
- * Author Name
+ * Colour Sequence 
+ * Anum Shahin
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Figure out what the correct order is for this 4 colour sequence.
+ * My hypnosis will work and I will receive a grade for this description.
  */
 
 "use strict";
 
+// create background and add other colours
+const bg = {
+    fill: "#000000",
+    fills: {
+        black: "#000000",
+        green: "#6ca865",
+        pink: "#e6a5b2",
+        orange: "#ea8112"
+    }
+}
+
+// an ending where you get the sequence right
+let sequenceEnd = false;
+
+// an ending where you get the sequence wrong
+let sequenceFalse = false;
+
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ // create canvas
 */
 function setup() {
+    createCanvas (500,500);
 
+    
+    
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * draw background
 */
 function draw() {
-
+    background ("#000000");
 }
