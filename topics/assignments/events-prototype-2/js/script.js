@@ -16,7 +16,7 @@ const ball = {
     size: 25,
     fill: "#71af80",
     collectSFX: undefined, // to be loaded
-    delay: 1000 // how long before ball changes position
+    delay: 500 // how long before ball changes position
 };
 
 
@@ -52,9 +52,11 @@ async function setup() {
 
     ball.collectSFX.rate(0.8);
 
+    setInterval(resetBall,ball.delay );
+
 }
 
-// position ball randomly on the canvas
+// position ball randomly on the canvas, calls when timer is reset
 
 function resetBall(){
     ball.x = random(ball.size/2, width - ball.size/2);
@@ -87,8 +89,9 @@ function draw() {
 
 }
 
-// check if button is clicked to play the sound
 
+
+// check if ball is clicked 
 function mousePressed(){
     // check if click is inside the ball
     const d = dist(mouseX, mouseY, ball.x, ball.y);
@@ -99,41 +102,6 @@ function mousePressed(){
     }
 }
 
-// // make button unpressed
-// function mouseReleased() {
-//     button.fill = button.fills.unpressed;
-
-// }
-
-// function drawDeathScreen(){
-//     if (mousePressed){
-//         push();
-//         textSize(BOLD);
-//         textAlign(CENTER, CENTER);
-//         text("YOU DIED", width/2, height/2);
-//         pop();
-//     }
-// }
-
-// function displayUI(){
-//     if (gameOver) {
-//         push();
-//         fill("#ffffff");
-//         textSize(64);
-//         textStyle(BOLD);
-//         textAlign(CENTER, CENTER);
-//         text("YOU DIED", width/2, height/2);
-//         pop();
-
-//         push();
-//         fill("#ffffff");
-//         textSize(22);
-//         textAlign(CENTER,BOTTOM);
-//         text("Seriously, what were you thinking? I told you not to press it.")
-//     }
-// }
-
-// // death screen
 
 // function drawGameOver() {
 //     push();
@@ -150,16 +118,4 @@ function mousePressed(){
 //     textStyle(BOLD);
 //     textAlign(CENTER, BOTTOM);
 //     text("Seriously, what were you thinking? I told you not to press it.")
-// }
-
-// function lose(){
-//     gameOver = true;
-// }
-
-// function mousePressed(){
-//     lose()
-// }
-
-// function mouseReleased(){
-//     lose()
 // }
