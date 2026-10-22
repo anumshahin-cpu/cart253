@@ -30,7 +30,6 @@ let gameTime = 20 * 1000
 
 let gameOver = false;
 
-let BallCollected = false;
 
 // load sound effect
 
