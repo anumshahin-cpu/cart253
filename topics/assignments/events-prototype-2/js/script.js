@@ -8,6 +8,16 @@
 
 "use strict";
 
+// the ball
+const ball = {
+    // position and size
+    x: undefined, // random
+    y: undefined, // random
+    size: 25,
+    fill: "#71af80",
+    collectSFX: undefined, // to be loaded
+}
+
 
 
 // set a timer
