@@ -16,7 +16,7 @@ const ball = {
     size: 25,
     fill: "#71af80",
     collectSFX: undefined, // to be loaded
-}
+};
 
 
 
@@ -44,8 +44,20 @@ async function setup() {
 
     await preload();
 
+    // reset the ball for it to be in a random place
+    resetBall();
+    // start timer for game to be over
+    startGameOverTimer();
+
     ball.collectSFX.rate(0.8);
 
+}
+
+// position ball randomly on the canvas
+
+function resetBall(){
+    ball.x = random(ball.size/2, width - ball.size/2);
+    ball.y = random(ball.size/2, height - ball.size/2);
 }
 
 
