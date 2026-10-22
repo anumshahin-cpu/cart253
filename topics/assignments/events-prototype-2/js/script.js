@@ -2,7 +2,7 @@
  * Can't Catch Me!
  * Anum Shahin
  * 
- * 
+ * Try to catch a ball that's teleporting around the screen rapidly.
  * Grade please.
  */
 
@@ -13,7 +13,7 @@ const ball = {
     // position and size
     x: undefined, // random
     y: undefined, // random
-    size: 25,
+    size: 30,
     fill: "#71af80",
     collectSFX: undefined, // to be loaded
     delay: 500 // how long before ball changes position
@@ -52,7 +52,9 @@ async function setup() {
 
     ball.collectSFX.rate(0.8);
 
-    setInterval(resetBall,ball.delay );
+    setInterval(resetBall, ball.delay)
+
+    
 
 }
 
@@ -61,16 +63,17 @@ async function setup() {
 function resetBall(){
     ball.x = random(ball.size/2, width - ball.size/2);
     ball.y = random(ball.size/2, height - ball.size/2);
+
 }
 
 // starts the timer that will end the game
 function startGameOverTimer(){
-    setInterval(endGame, gameTime);
+    setInterval(resetGame, gameTime);
 }
 
 // ending the game
 
-function endGame(){
+function resetGame(){
     gameOver = true;
 }
 
@@ -87,7 +90,17 @@ function draw() {
     ellipse(ball.x,ball.y,ball.size);
     pop();
 
-}
+    // // if game isn't over, draw current ball
+    // if (!gameOver) {
+    //     drawBall();
+    // }
+    //     // if it is over, add game over message
+    // else {
+    //     drawGameOver();
+    //     }
+    }
+
+
 
 
 
@@ -103,19 +116,19 @@ function mousePressed(){
 }
 
 
-// function drawGameOver() {
-//     push();
-//     fill("#ffffff");
-//     textSize(64);
-//     textStyle(BOLD);
-//     textAlign(CENTER, CENTER);
-//     text("YOU DIED", width/2, height/2);
-//     pop();
+function drawGameOver() {
+    push();
+    fill("#ffffff");
+    textSize(64);
+    textStyle(BOLD);
+    textAlign(CENTER, CENTER);
+    text("YOU DIED", width/2, height/2);
+    pop();
 
-//     push();
-//     fill("#ffffff");
-//     textSize(24);
-//     textStyle(BOLD);
-//     textAlign(CENTER, BOTTOM);
-//     text("Seriously, what were you thinking? I told you not to press it.")
-// }
+    push();
+    fill("#ffffff");
+    textSize(24);
+    textStyle(BOLD);
+    textAlign(CENTER, BOTTOM);
+    text("Seriously, what were you thinking? I told you not to press it.")
+}
