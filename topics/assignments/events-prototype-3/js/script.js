@@ -49,11 +49,22 @@ function draw() {
 
 // }
 
-function keyPressed(event){
-    if (event.key === "b"){
+// make it possible for the colours to change after typing a specific key
 
+function keyPressed(event){
+    if (event.keyCode === 66){
+        bg.fill = bg.fills.black;
     }
-    bg.fill = bg.fills.black;
+    
+    else if (event.keyCode === 71){
+        bg.fill = bg.fills.green;
+    }
+    else if (event.keyCode === 80){
+        bg.fill = bg.fills.pink;
+    }
+    else if (event.keyCode === 79) {
+        bg.fill = bg.fills.pink;
+    }
 
 }
 
