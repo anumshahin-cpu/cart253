@@ -65,3 +65,20 @@ Welcome! This website is to showcase the prototypes and upload the works that de
 [website!](https://anumshahin-cpu.github.io/cart253/topics/assignments/conditionals-prototype-3/)
 [code!](https://github.com/anumshahin-cpu/cart253/blob/main/topics/assignments/conditionals-prototype-3/js/script.js)
 
+### Do NOT Press The Button
+![image](./images/screenshot%20of%20explosive%20button.png)
+
+[website!](https://anumshahin-cpu.github.io/cart253/topics/assignments/events-prototype-1/)
+[code!](https://github.com/anumshahin-cpu/cart253/blob/main/topics/assignments/events-prototype-1/js/script.js)
+
+### Can't Catch Me!
+![image](./images/screenshot%20of%20cant%20catch%20me.png)
+
+[website!](https://anumshahin-cpu.github.io/cart253/topics/assignments/events-prototype-2/)
+[code!](https://github.com/anumshahin-cpu/cart253/blob/main/topics/assignments/events-prototype-2/js/script.js)
+
+### Colour Sequence
+![image](./images/screenshot%20of%20colour%20sequence.png)
+
+[website!](https://anumshahin-cpu.github.io/cart253/topics/assignments/events-prototype-3/)
+[code!](https://github.com/anumshahin-cpu/cart253/blob/main/topics/assignments/events-prototype-3/js/script.js)
