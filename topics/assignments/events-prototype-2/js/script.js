@@ -54,7 +54,7 @@ async function setup() {
 
     ball.collectSFX.rate(0.8);
 
-    setInterval(resetBall, ball.delay)
+    setInterval(resetBall, ball.delay) // set time intervals for ball's location to be reset
 
 
 
@@ -93,7 +93,7 @@ function draw() {
 
 
     }
-    // i actually don't know why this part works, it doesn't work otherwise
+    // since game isn't over, continue to display ball and score
     else {
         drawScore();
         drawBall();
