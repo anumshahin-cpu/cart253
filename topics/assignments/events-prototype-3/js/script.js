@@ -8,6 +8,10 @@
 
 "use strict";
 
+// add solution via string
+let solution = "bgpo";
+let answer = ""; // user has to type in the answer
+
 // create background and add other colours
 const bg = {
     fill: "#4d4d4d",
@@ -37,32 +41,43 @@ let sequenceFalse = false;
  // create canvas
 */
 function setup() {
-    createCanvas (500,500);
+    createCanvas(500, 500);
 
-    
+
 }
 
 /**
  * draw background
 */
 function draw() {
-    background (bg.fill);
+    background(bg.fill);
 
-    
+    text(solution, 100, 100); // add text for solution
+    text(answer, 100, 200); // add text for answer 
+
 }
 
 // }
 
 // controls the background's colour
 
-function keyPressed(event){
-    if (event.keyCode === bg.keys.blackKey){
+function keyPressed(event) {
+    answer += event.key;
+    if (answer.length === solution.length) {
+        if (answer === solution) {
+            solution = "YOU WIN!" // if you put in the right answer
+        }
+        else {
+            solution = "YOU LOSE!" // if you put in wrong answer
+        }
+    }
+    if (event.keyCode === bg.keys.blackKey) {
         bg.fill = bg.fills.black;
     }
-    else if (event.keyCode === bg.keys.greenKey){
+    else if (event.keyCode === bg.keys.greenKey) {
         bg.fill = bg.fills.green;
     }
-    else if (event.keyCode === bg.keys.pinkKey){
+    else if (event.keyCode === bg.keys.pinkKey) {
         bg.fill = bg.fills.pink;
     }
     else if (event.keyCode === bg.keys.orangeKey) {
@@ -71,30 +86,30 @@ function keyPressed(event){
 
 }
 
-function endSequence(){
-    sequenceEnd = true;
-}
+// function endSequence() {
+//     sequenceEnd = true;
+// }
 
-function falseSequence(){
-    sequenceFalse = true;
-}
+// function falseSequence() {
+//     sequenceFalse = true;
+// }
 
-function drawEndSequence(){
-    push();
-    fill("#870a0a");
-    textSize(64);
-    textStyle(BOLD);
-    textAlign(CENTER, CENTER);
-    text("GOOD JOB!", width/2, height/2);
-    pop();
-}
+// function drawEndSequence() {
+//     push();
+//     fill("#870a0a");
+//     textSize(64);
+//     textStyle(BOLD);
+//     textAlign(CENTER, CENTER);
+//     text("GOOD JOB!", width / 2, height / 2);
+//     pop();
+// }
 
-function drawFalseSequence(){
-    push();
-    fill("#3216be");
-    textSize(64);
-    textStyle(BOLD);
-    textAlign(CENTER, CENTER);
-    text("TRY AGAIN", width/2, height/2);
-    pop();
-}
+// function drawFalseSequence() {
+//     push();
+//     fill("#3216be");
+//     textSize(64);
+//     textStyle(BOLD);
+//     textAlign(CENTER, CENTER);
+//     text("TRY AGAIN", width / 2, height / 2);
+//     pop();
+// }
