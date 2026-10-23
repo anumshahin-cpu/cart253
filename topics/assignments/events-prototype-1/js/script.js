@@ -26,13 +26,20 @@ const button = {
 }
 
 
+
 // // set a timer
 
 // let time = 10 * 1000
 
 // // game ends after 10 seconds
 
-// let gameOver = false;
+let gameOver = false;
+
+// game after you don't press button
+
+let gameWin = false;
+
+let winTimer
 
 // // load sound effect
 
@@ -57,8 +64,14 @@ async function setup() {
 
     button.soundEffect.rate(0.8);
 
+    winTimer = setTimeout(win, 10000)
+
 }
 
+function win(){
+    clearTimeout(winTimer)
+    gameWin = true;
+}
 
 /**
  * display button
@@ -73,6 +86,8 @@ function draw() {
     ellipse(button.x,button.y,button.size);
     pop();
 
+    displayUI()
+
 }
 
 // check if button is clicked to play the sound
@@ -84,6 +99,7 @@ function mousePressed(){
     if (overlap) {
         button.soundEffect.play();
         button.fill = button.fills.pressed;
+        lose()
         
     }
 }
@@ -94,61 +110,45 @@ function mouseReleased() {
 
 }
 
-// function drawDeathScreen(){
-//     if (mousePressed){
-//         push();
-//         textSize(BOLD);
-//         textAlign(CENTER, CENTER);
-//         text("YOU DIED", width/2, height/2);
-//         pop();
-//     }
-// }
+function displayUI(){
 
-// function displayUI(){
-//     if (gameOver) {
-//         push();
-//         fill("#ffffff");
-//         textSize(64);
-//         textStyle(BOLD);
-//         textAlign(CENTER, CENTER);
-//         text("YOU DIED", width/2, height/2);
-//         pop();
+    // death screen
+    if (gameOver) {
+        push();
+        fill("#ffffff");
+        textSize(64);
+        textStyle(BOLD);
+        textAlign(CENTER, CENTER);
+        text("YOU DIED", width/2, height/2);
+        pop();
 
-//         push();
-//         fill("#ffffff");
-//         textSize(22);
-//         textAlign(CENTER,BOTTOM);
-//         text("Seriously, what were you thinking? I told you not to press it.")
-//     }
-// }
+        push();
+        fill("#ffffff");
+        textSize(22);
+        textAlign(CENTER,BOTTOM);
+        text("Seriously, what were you thinking? \n I told you not to press it.", width/2, 450)
+    }
 
-// // death screen
+    // win screen
+        if (gameWin) {
+        push();
+        fill("#ffffff");
+        textSize(48);
+        textStyle(BOLD);
+        textAlign(CENTER, CENTER);
+        text("WOW, \nYOU'RE PATIENT!", width/2, height/2);
+        
 
-// function drawGameOver() {
-//     push();
-//     fill("#ffffff");
-//     textSize(64);
-//     textStyle(BOLD);
-//     textAlign(CENTER, CENTER);
-//     text("YOU DIED", width/2, height/2);
-//     pop();
+        push();
+        fill("#ffffff");
+        textSize(22);
+        textAlign(CENTER,BOTTOM);
+        text("I thought you were going to click it, good job.", width/2, 450)
+    }
+}
 
-//     push();
-//     fill("#ffffff");
-//     textSize(24);
-//     textStyle(BOLD);
-//     textAlign(CENTER, BOTTOM);
-//     text("Seriously, what were you thinking? I told you not to press it.")
-// }
 
-// function lose(){
-//     gameOver = true;
-// }
-
-// function mousePressed(){
-//     lose()
-// }
-
-// function mouseReleased(){
-//     lose()
-// }
+function lose(){
+    gameOver = true;
+    clearTimeout(winTimer)
+}

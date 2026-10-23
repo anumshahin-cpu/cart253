@@ -33,7 +33,7 @@ let gameOver = false;
 
 // load sound effect
 
-async function preload(){
+async function preload() {
     ball.collectSFX = await loadSound("assets/sounds/collect.wav");
 }
 
@@ -56,26 +56,26 @@ async function setup() {
 
     setInterval(resetBall, ball.delay)
 
-    
+
 
 }
 
 // position ball randomly on the canvas, calls when timer is reset
 
-function resetBall(){
-    ball.x = random(ball.size/2, width - ball.size/2);
-    ball.y = random(ball.size/2, height - ball.size/2);
+function resetBall() {
+    ball.x = random(ball.size / 2, width - ball.size / 2);
+    ball.y = random(ball.size / 2, height - ball.size / 2);
 
 }
 
 // starts the timer that will end the game
-function startGameOverTimer(){
+function startGameOverTimer() {
     setTimeout(resetGame, gameTime);
 }
 
 // ending the game
 
-function resetGame(){
+function resetGame() {
     gameOver = true;
 }
 
@@ -83,61 +83,68 @@ function resetGame(){
  * display ball
 */
 function draw() {
-    background ("#eea1d3");
+    background("#eea1d3");
 
-    // ball
-    push ();
-    noStroke();
-    fill(ball.fill);
-    ellipse(ball.x,ball.y,ball.size);
-    pop();
+
 
     // if game is over, draw current ball
     if (gameOver) {
-        drawBall();
+        drawGameOver();
+
+
     }
-        // i actually don't know why this part works, it doesn't work otherwise
+    // i actually don't know why this part works, it doesn't work otherwise
     else {
         drawScore();
-        }
+        drawBall();
     }
+}
 
-    // displays current score at top left 
-    function drawScore(){
-        push();
-        fill("#ffffff");
-        textSize(24);
-        textStyle(BOLD);
-        textAlign(CENTER, CENTER);
-        text(score, width/8, height/8);
-        pop();
-    }
+// draw the ball
+function drawBall() {
+    // ball
+    push();
+    noStroke();
+    fill(ball.fill);
+    ellipse(ball.x, ball.y, ball.size);
+    pop();
+}
 
+// displays current score at top left 
+function drawScore() {
+    push();
+    fill("#ffffff");
+    textSize(24);
+    textStyle(BOLD);
+    textAlign(CENTER, CENTER);
+    text(score, width / 8, height / 8);
+    pop();
+}
 
+// draw the game over screen
+
+function drawGameOver() {
+    push();
+    fill("#ffffff");
+    textSize(24);
+    textStyle(BOLD);
+    textAlign(CENTER, CENTER);
+    text("GAME OVER", width / 2, height / 2);
+    pop();
+}
 
 
 // check if ball is clicked 
-function mousePressed(){
+function mousePressed() {
     // check if click is inside the ball
     const d = dist(mouseX, mouseY, ball.x, ball.y);
-    const overlap = (d <ball.size/2);
+    const overlap = (d < ball.size / 2);
     if (overlap) {
         ball.collectSFX.play();
         score++;
 
 
-        
-        
+
+
     }
 }
-
-
-// function drawBallCollected() {
-//     push();
-//     fill("#ffffff");
-//     textSize(64);
-//     textStyle(BOLD);
-//     textAlign(CENTER, CENTER);
-//     text("YOU WON!", width/2, height/2);
-//     pop();
-// }

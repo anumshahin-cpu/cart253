@@ -32,3 +32,6 @@ I found this assignment pretty complicated at first, especially in regards to th
 ![image](./images/traffic%20lights%20screenshot.png)
 ![image](./images/screenshot%20of%20hollow%20purple.png)
 ![image](./images/screenshot%20of%20seal%20your%20fate.png)
+
+### October 22 2026
+
