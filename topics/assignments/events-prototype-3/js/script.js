@@ -2,7 +2,7 @@
  * Colour Sequence 
  * Anum Shahin
  * 
- * Figure out what the correct order is for this 4 colour sequence.
+ * Figure out what the correct order is for this 4 colour sequence. Well I suppose you're not guessing because it's written at the top anyway.
  * My hypnosis will work and I will receive a grade for this description.
  */
 
@@ -31,11 +31,6 @@ const bg = {
     }
 }
 
-// an ending where you get the sequence right
-let sequenceEnd = false;
-
-// an ending where you get the sequence wrong
-let sequenceFalse = false;
 
 /**
  // create canvas
@@ -86,30 +81,5 @@ function keyPressed(event) {
 
 }
 
-// function endSequence() {
-//     sequenceEnd = true;
-// }
 
-// function falseSequence() {
-//     sequenceFalse = true;
-// }
 
-// function drawEndSequence() {
-//     push();
-//     fill("#870a0a");
-//     textSize(64);
-//     textStyle(BOLD);
-//     textAlign(CENTER, CENTER);
-//     text("GOOD JOB!", width / 2, height / 2);
-//     pop();
-// }
-
-// function drawFalseSequence() {
-//     push();
-//     fill("#3216be");
-//     textSize(64);
-//     textStyle(BOLD);
-//     textAlign(CENTER, CENTER);
-//     text("TRY AGAIN", width / 2, height / 2);
-//     pop();
-// }
