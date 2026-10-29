@@ -21,8 +21,24 @@ function setup() {
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * nothing in here because it's not needed
 */
 function draw() {
 
+}
+
+//this is where the stamp will be drawn
+function mousePressed() {
+    stamp(mouseX, mouseY);
+}
+
+// add the circle around the stamp
+function stamp(x, y) {
+    push();
+    noFill();
+    stroke("#e891aa");
+    strokeWeight(6);
+    rectMode(CENTER);
+    ellipse(x, y, 100);
+    pop();
 }
