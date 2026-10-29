@@ -11,6 +11,7 @@
 // add one target circle
 
 let target = undefined;
+soundEffect: undefined
 
 // the user circle!
 
@@ -21,11 +22,17 @@ const userCircle = {
     fill: "#ff0000"
 };
 
+// load sound effect
+
+async function preload() {
+    target.soundEffect = await loadSound("assets/sounds/hollowpurple.wav")
+}
+
 
 /**
  * create the canvas and target
 */
-function setup() {
+async function setup() {
     createCanvas(600, 600)
 
     // welcome to t-t-t-t-t-t-target
@@ -64,4 +71,18 @@ function draw() {
     userCircle.x = mouseX;
     userCircle.y = mouseY;
 
+    // check overlap
+    checkOverlap(userCircle, target);
+
+    // draw target and user
+    drawElement(target);
+    drawElement(userCircle);
+
+}
+
+function checkOverlap(user, target) {
+    // distance between circle's centres
+    const d = dist(user.x, user.y, target.x, target.y);
+    const overlap = (d < user.size / 2 + target.size / 2);
+    // target fill based on overlap or not, and for the sound to play 
 }
