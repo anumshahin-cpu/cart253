@@ -13,6 +13,8 @@
 let target = undefined;
 let hollowPurple = undefined;
 
+let soundHappened = false;
+
 // the user circle!
 
 const userCircle = {
@@ -25,7 +27,7 @@ const userCircle = {
 // load sound effect
 
 async function preload() {
-    hollowPurple = await loadSound("assets/sounds/hollowpurple.wav")
+    hollowPurple = await loadSound("assets/sounds/hollowpurple.mp3")
 }
 
 
@@ -89,7 +91,10 @@ function checkOverlap(user, target) {
     if (d < target.size / 2) {
         target.fill = target.fills.overlap;
         userCircle.size = 0;
-        target.soundEffect.play();
+        if (soundHappened === false) {
+            target.soundEffect.play();
+        }
+        soundHappened = true;
     }
     else {
         target.fill = target.fills.noOverlap;
