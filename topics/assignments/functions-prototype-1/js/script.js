@@ -1,13 +1,14 @@
 /**
- * Flower Stamp Teehee
+ * Stamp Teehee
  * Anum Shahin
  * 
- * A stamp, but it's a flower stamp.
+ * A stamp, but it's kinda cute.
  * Grade
  */
 
 "use strict";
 
+// let flower = '🌸';
 /**
  * // create canvas
 */
@@ -40,5 +41,14 @@ function stamp(x, y) {
     strokeWeight(6);
     rectMode(CENTER);
     ellipse(x, y, 100);
+    pop();
+
+    // text in the stamp
+    push();
+    fill("#e891aa");
+    // noStroke();
+    textAlign(CENTER, CENTER);
+    textSize(40);
+    text(">.<", x, y);
     pop();
 }
