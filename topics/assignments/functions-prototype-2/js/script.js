@@ -1,17 +1,36 @@
 /**
- * Title of Project
+ * Hollow Purple Part 2
  * Author Name
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Coughs. Anyway, what happens if you hover the red circle over the blue circle?
+ * Please.
  */
 
 "use strict";
 
+// add one target circle
+
+let target = undefined;
+
+// the user circle!
+
+const userCircle = {
+    x: undefined, // mouseX
+    y: undefined, // mouseY
+    size: 300,
+    fill: "#ff0000"
+};
+
+
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * create the canvas and target
 */
 function setup() {
+    createCanvas(600, 600)
+
+    // welcome to t-t-t-t-t-t-target
+    target = createTarget(300, 400, 400)
+
 
 }
 
