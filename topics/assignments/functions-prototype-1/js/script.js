@@ -1,17 +1,21 @@
 /**
- * Title of Project
- * Author Name
+ * Flower Stamp Teehee
+ * Anum Shahin
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * A stamp, but it's a flower stamp.
+ * Grade
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * // create canvas
 */
 function setup() {
+    createCanvas(500, 500);
+
+    // fill background
+    background(240);
 
 }
 
