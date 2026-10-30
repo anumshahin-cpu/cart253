@@ -82,3 +82,22 @@ Welcome! This website is to showcase the prototypes and upload the works that de
 
 [website!](https://anumshahin-cpu.github.io/cart253/topics/assignments/events-prototype-3/)
 [code!](https://github.com/anumshahin-cpu/cart253/blob/main/topics/assignments/events-prototype-3/js/script.js)
+
+### Stamp Teehee
+![image](./images/screenshot%20of%20stamp%20teehee.png)
+
+[website!](https://anumshahin-cpu.github.io/cart253/topics/assignments/functions-prototype-1/)
+[code!](https://github.com/anumshahin-cpu/cart253/blob/main/topics/assignments/functions-prototype-1/js/script.js)
+
+### Hollow Purple Part 2
+![image](./images/screenshot%20of%20hollow%20purple%202.png)
+
+[website!](https://anumshahin-cpu.github.io/cart253/topics/assignments/functions-prototype-2/)
+[code!](https://github.com/anumshahin-cpu/cart253/blob/main/topics/assignments/functions-prototype-2/js/script.js)
+
+### Traffic Lights, Repurposed!
+![image](./images/screenshot%20of%20traffic%20lights,%20repurposed.png)
+
+[website!](https://anumshahin-cpu.github.io/cart253/topics/assignments/functions-prototype-3/)
+[code!](https://github.com/anumshahin-cpu/cart253/blob/main/topics/assignments/functions-prototype-3/js/script.js)
+

@@ -41,3 +41,12 @@ I had a hard time coming up with what I could do for my prototypes for this assi
 ![image](./images/screenshot%20of%20cant%20catch%20me.png)
 ![image](./images/screenshot%20of%20colour%20sequence.png)
 
+
+### October 29 2026
+
+This assignment gave us a wide range of things that we could actually make which made it harder to come up with ideas for the prototypes. I ended up keeping it really simple and following along closely to the assignments, and I refurbished one of my old prototypes and added something small to it. I didn't run into as many errors as I have in previous assignments, but still ran into some that could be easily fixed. For the first prototype, I decided to follow in Pippin's footsteps and make a stamp, but instead of making it a rectangular stamp with a word in it, I made it a circle and put a small emoticon in the centre of it, which made it look like a cute little face. Originally I wanted it to be a flower emoji but I ran into a few errors and couldn't implement it, though when I put in the emoticon as a placeholder, I actually really liked it and decided to keep it. For my second prototype, I did a callback to another prototype I had done before, it was a reference to a popular anime that I'm really into, Jujutsu Kaisen, and so I made it that you could overlap a big blue circle with a red one of the same size and it would turn purple, which is a reference to a special move that one of the characters does in the series. The fun part was that when you hovered over it for the first time, it would play a voiceline from the character that uses the move. I did run into a problem where the voiceline would glitch out because it turned out that it was playing over and over again which broke it. I just needed to add a function where it only played one time which fixed it. I also made it so the red circle would disappear if you hovered over the blue circle, but the moment you took it off, the red circle would come back. My third prototype was one I did before, with the traffic lights, all I did was clean up the code and added an extra fourth traffic light (which doesn't exist, of course.)
+
+![image](./images/screenshot%20of%20stamp%20teehee.png)
+![image](./images/screenshot%20of%20hollow%20purple%202.png)
+![image](./images/screenshot%20of%20traffic%20lights,%20repurposed.png)
+
