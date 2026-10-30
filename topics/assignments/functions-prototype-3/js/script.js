@@ -1,16 +1,21 @@
 /**
- * Traffic Lights!
+ * Traffic Lights, Repurposed!
  * Anum Shahin
  * 
- * Three traffic lights, what happens when you hover over them I wonder?
+ * Three (and a mysterious fourth one?) traffic lights, what happens when you hover over them I wonder?
  * Let the grading begin!
  */
 
 "use strict";
 
+// add traffic light variables
 let redCircle = undefined;
 let greenCircle = undefined;
 let yellowCircle = undefined;
+
+// add a mysterious fourth traffic light
+let tealCircle = undefined;
+
 
 
 const userCircle = {
@@ -25,9 +30,10 @@ const userCircle = {
 */
 function setup() {
     createCanvas(400, 300);
-    redCircle = createTrafficLight(70, 150, "#ff0000"); // 
-    greenCircle = createTrafficLight(330, 150, "#00ff00");
-    yellowCircle = createTrafficLight(200, 150, "#ffff00")
+    redCircle = createTrafficLight(70, 100, "#ff0000"); // 
+    greenCircle = createTrafficLight(330, 100, "#00ff00");
+    yellowCircle = createTrafficLight(200, 100, "#ffff00");
+    tealCircle = createTrafficLight(200, 230, "#17c6da");
 
 }
 
@@ -65,11 +71,13 @@ function draw() {
     checkOverlap(redCircle);
     checkOverlap(greenCircle);
     checkOverlap(yellowCircle);
+    checkOverlap(tealCircle);
 
     // draw traffic light (wow what a good explanation)
     drawTrafficLight(redCircle);
     drawTrafficLight(greenCircle);
     drawTrafficLight(yellowCircle);
+    drawTrafficLight(tealCircle);
 
 }
 
