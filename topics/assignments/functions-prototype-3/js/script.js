@@ -62,41 +62,11 @@ function draw() {
 
     // check overlap
 
-
-    // // calculate distance between circles
-    // const d = dist(userCircle.x, userCircle.y, redCircle.x, redCircle.y);
-    // const dgreen = dist(userCircle.x, userCircle.y, greenCircle.x, greenCircle.y);
-    // const dyellow = dist(userCircle.x, userCircle.y, yellowCircle.x, yellowCircle.y);
-    // const overlap = (d < userCircle.size / 2 + redCircle.size / 2);
-    // const overlapgreen = (dgreen < userCircle.size / 2 + greenCircle.size / 2);
-    // const overlapyellow = (dyellow < userCircle.size / 2 + yellowCircle.size / 2);
-    // // set fill based on whether they overlap
-    // if (overlap) {
-    //     redCircle.fill = redCircle.fills.overlap;
-    // }
-    // else {
-    //     redCircle.fill = redCircle.fills.noOverlap;
-    // }
-    // if (overlapgreen) {
-    //     greenCircle.fill = greenCircle.fills.overlap;
-    // }
-    // else {
-    //     greenCircle.fill = greenCircle.fills.noOverlap;
-    // }
-    // if (overlapyellow) {
-    //     yellowCircle.fill = yellowCircle.fills.overlap;
-    // }
-    // else {
-    //     yellowCircle.fill = yellowCircle.fills.noOverlap;
-    // }
-
-
-
     checkOverlap(redCircle);
     checkOverlap(greenCircle);
     checkOverlap(yellowCircle);
 
-
+    // draw traffic light (wow what a good explanation)
     drawTrafficLight(redCircle);
     drawTrafficLight(greenCircle);
     drawTrafficLight(yellowCircle);
@@ -111,7 +81,7 @@ function drawTrafficLight(_trafficLight) {
     ellipse(_trafficLight.x, _trafficLight.y, _trafficLight.size);
     pop();
 }
-
+// make it so we can hover over each light
 function checkOverlap(_trafficLight) {
     const d = dist(userCircle.x, userCircle.y, _trafficLight.x, _trafficLight.y);
     const overlap = (d < userCircle.size / 2 + _trafficLight.size / 2);
