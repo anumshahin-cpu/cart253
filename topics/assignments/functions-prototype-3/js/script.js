@@ -8,47 +8,10 @@
 
 "use strict";
 
+let redCircle = undefined;
+let greenCircle = undefined;
+let yellowCircle = undefined;
 
-
-const redCircle = {
-    // position and size
-    x: 70,
-    y: 150,
-    size: 100,
-    // colours
-    fill: "#545454", // starting with grey
-    fills: {
-        noOverlap: "#545454", // dark grey for no overlap
-        overlap: "#ff0000" // red for overlap
-    }
-};
-
-const greenCircle = {
-    // position and size
-    x: 330,
-    y: 150,
-    size: 100,
-    // colours
-    fill: "#545454", // start as grey
-    fills: {
-        noOverlap: "#545454", // dark grey for no overlap
-        overlap: "#00ff00" // green for overlap
-    }
-};
-
-const yellowCircle = {
-    // position and size
-    x: 200,
-    y: 150,
-    size: 100,
-    // colours
-    fill: "#545454", // starting with grey
-    fills: {
-        noOverlap: "#545454", // dark grey for no overlap
-        overlap: "#ffff00" // yellow for overlap
-    }
-
-}
 
 const userCircle = {
     x: undefined, // will be mouseX
@@ -61,10 +24,31 @@ const userCircle = {
  * Create the canvas
 */
 function setup() {
-    createCanvas (400, 300);
+    createCanvas(400, 300);
+    redCircle = createTrafficLight(70, 150, "#ff0000"); // 
+    greenCircle = createTrafficLight(330, 150, "#00ff00");
+    yellowCircle = createTrafficLight(200, 150, "#ffff00")
 
 }
 
+function createTrafficLight(x, y, lightColour) {
+    const babyTrafficLight = {
+        // position and size
+        x: x,
+        y: y,
+        size: 100,
+        // colours
+        fill: "#545454", // starting with grey
+        fills: {
+            noOverlap: "#545454", // dark grey for no overlap
+            overlap: lightColour // colour for overlap
+        }
+
+    }
+    return babyTrafficLight
+
+
+}
 
 /**
  * // drawing the background and the three lights
@@ -79,54 +63,63 @@ function draw() {
     // check overlap
 
 
-    // calculate distance between circles
-    const d = dist(userCircle.x, userCircle.y, redCircle.x, redCircle.y);
-    const dgreen= dist(userCircle.x, userCircle.y, greenCircle.x, greenCircle.y);
-    const dyellow = dist(userCircle.x, userCircle.y, yellowCircle.x, yellowCircle.y);
-    const overlap = (d < userCircle.size/2 + redCircle.size/2);
-   const overlapgreen = (dgreen < userCircle.size/2 + greenCircle.size/2);
-    const overlapyellow = (dyellow < userCircle.size/2 + yellowCircle.size/2);
-    // set fill based on whether they overlap
+    // // calculate distance between circles
+    // const d = dist(userCircle.x, userCircle.y, redCircle.x, redCircle.y);
+    // const dgreen = dist(userCircle.x, userCircle.y, greenCircle.x, greenCircle.y);
+    // const dyellow = dist(userCircle.x, userCircle.y, yellowCircle.x, yellowCircle.y);
+    // const overlap = (d < userCircle.size / 2 + redCircle.size / 2);
+    // const overlapgreen = (dgreen < userCircle.size / 2 + greenCircle.size / 2);
+    // const overlapyellow = (dyellow < userCircle.size / 2 + yellowCircle.size / 2);
+    // // set fill based on whether they overlap
+    // if (overlap) {
+    //     redCircle.fill = redCircle.fills.overlap;
+    // }
+    // else {
+    //     redCircle.fill = redCircle.fills.noOverlap;
+    // }
+    // if (overlapgreen) {
+    //     greenCircle.fill = greenCircle.fills.overlap;
+    // }
+    // else {
+    //     greenCircle.fill = greenCircle.fills.noOverlap;
+    // }
+    // if (overlapyellow) {
+    //     yellowCircle.fill = yellowCircle.fills.overlap;
+    // }
+    // else {
+    //     yellowCircle.fill = yellowCircle.fills.noOverlap;
+    // }
+
+
+
+    checkOverlap(redCircle);
+    checkOverlap(greenCircle);
+    checkOverlap(yellowCircle);
+
+
+    drawTrafficLight(redCircle);
+    drawTrafficLight(greenCircle);
+    drawTrafficLight(yellowCircle);
+
+}
+
+function drawTrafficLight(_trafficLight) {
+    // draws all the traffic lights
+    push();
+    noStroke();
+    fill(_trafficLight.fill);
+    ellipse(_trafficLight.x, _trafficLight.y, _trafficLight.size);
+    pop();
+}
+
+function checkOverlap(_trafficLight) {
+    const d = dist(userCircle.x, userCircle.y, _trafficLight.x, _trafficLight.y);
+    const overlap = (d < userCircle.size / 2 + _trafficLight.size / 2);
     if (overlap) {
-        redCircle.fill = redCircle.fills.overlap;
+        _trafficLight.fill = _trafficLight.fills.overlap;
     }
     else {
-        redCircle.fill = redCircle.fills.noOverlap;
+        _trafficLight.fill = _trafficLight.fills.noOverlap;
     }
-    if (overlapgreen) {
-        greenCircle.fill = greenCircle.fills.overlap;
-    }
-    else {
-        greenCircle.fill = greenCircle.fills.noOverlap;
-    }
-    if (overlapyellow) {
-        yellowCircle.fill = yellowCircle.fills.overlap;
-    }
-    else {
-        yellowCircle.fill = yellowCircle.fills.noOverlap;
-    }
-
-    
-
-    // draw red circle
-    push();
-    noStroke();
-    fill(redCircle.fill);
-    ellipse(redCircle.x, redCircle.y, redCircle.size);
-    pop();
-
-    // draw green circle
-    push();
-    noStroke();
-    fill(greenCircle.fill);
-    ellipse(greenCircle.x, greenCircle.y, greenCircle.size);
-    pop();
-
-    // draw yellow circle
-    push();
-    noStroke();
-    fill(yellowCircle.fill);
-    ellipse(yellowCircle.x, yellowCircle.y, yellowCircle.size);
-    pop();
 
 }
