@@ -8,10 +8,8 @@
 
 "use strict";
 
-// let flower = '🌸';
-/**
- * // create canvas
-*/
+ // create canvas
+
 function setup() {
     createCanvas(500, 500);
 
