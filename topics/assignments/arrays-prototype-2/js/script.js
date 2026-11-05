@@ -22,7 +22,7 @@ let fireworkDelay = maximumFireworkDelay
 function setup() {
     createCanvas(600, 600);
 
-    setInterval(addFirework, fireworkDelay);
+
 
 }
 
@@ -38,11 +38,11 @@ function addFirework() {
 //firework creation time
 function createFirework() {
     const firework = {
-        x: random(0, width),
-        y: -100,
+        x: mouseX,
+        y: mouseY,
         velocity: {
-            x: 0,
-            y: random(3, 10)
+            x: random(100, -100),
+            y: random(100, -100),
         },
         size: random(15, 40),
         hue: random(0, 360),
@@ -77,5 +77,14 @@ function drawFirework(firework) {
     fill(firework.hue, 100, 100);
     ellipse(firework.x, firework.y, firework.size);
     pop();
+
+}
+
+function mousePressed() {
+    for (let i = 0; i < 100; i += 1) {
+        addFirework()
+
+    }
+
 
 }
