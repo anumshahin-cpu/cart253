@@ -13,7 +13,7 @@ let confettis = [];
 
 // time between falling confetti
 const minimumConfettiDelay = 1 * 1000;
-const maximumConfettiDelay = 0.0001 * 1000;
+const maximumConfettiDelay = 0.001 * 1000;
 let confettiDelay = maximumConfettiDelay
 
 /**
