@@ -63,3 +63,8 @@ function draw() {
     }
 
 }
+
+function moveConfetti(confetti) {
+    confetti.x += confetti.velocity.x;
+    confetti.y += confetti.velocity.y;
+}
