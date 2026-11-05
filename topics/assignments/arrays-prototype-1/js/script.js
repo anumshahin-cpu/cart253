@@ -13,7 +13,7 @@ let confettis = [];
 
 // time between falling confetti
 const minimumConfettiDelay = 1 * 1000;
-const maximumConfettiDelay = 1 * 1000;
+const maximumConfettiDelay = 0.0001 * 1000;
 let confettiDelay = maximumConfettiDelay
 
 /**
@@ -22,7 +22,7 @@ let confettiDelay = maximumConfettiDelay
 function setup() {
     createCanvas(600, 600);
 
-    setTimeout(addConfetti, confettiDelay);
+    setInterval(addConfetti, confettiDelay);
 
 }
 
@@ -45,7 +45,7 @@ function createConfetti() {
             y: random(2, 10)
         },
         size: random(15, 40),
-        fill: random(r, g, b),
+        hue: random(0, 360),
     };
     return confetti;
 }
@@ -60,11 +60,22 @@ function draw() {
         moveConfetti(confetti);
         drawConfetti(confetti);
 
-    }
 
+    }
 }
 
+// move your confetti
 function moveConfetti(confetti) {
     confetti.x += confetti.velocity.x;
     confetti.y += confetti.velocity.y;
+}
+
+function drawConfetti(confetti) {
+    push();
+    noStroke();
+    colorMode(HSB)
+    fill(confetti.hue, 100, 100);
+    ellipse(confetti.x, confetti.y, confetti.size);
+    pop();
+
 }
