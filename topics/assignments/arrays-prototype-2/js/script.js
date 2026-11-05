@@ -8,13 +8,13 @@
 
 "use strict";
 
-// the confetti
-let confettis = [];
+// the fireworks
+let fireworks = [];
 
-// time between falling confetti
-const minimumConfettiDelay = 1 * 1000;
-const maximumConfettiDelay = 0.001 * 1000;
-let confettiDelay = maximumConfettiDelay
+// time between falling fireworks
+const minimumFireworkDelay = 1 * 1000;
+const maximumFireworkDelay = 0.001 * 1000;
+let fireworkDelay = maximumFireworkDelay
 
 /**
  * create the canvas
@@ -22,60 +22,60 @@ let confettiDelay = maximumConfettiDelay
 function setup() {
     createCanvas(600, 600);
 
-    setInterval(addConfetti, confettiDelay);
+    setInterval(addFirework, fireworkDelay);
 
 }
 
-// add confetti to array
+// add firework to array
 
-function addConfetti() {
+function addFirework() {
     // create and add one piece of confetti
-    const confetti = createConfetti();
-    confettis.push(confetti);
+    const firework = createFirework();
+    fireworks.push(firework);
 }
 
 
-//confetti creation time
-function createConfetti() {
-    const confetti = {
+//firework creation time
+function createFirework() {
+    const firework = {
         x: random(0, width),
         y: -100,
         velocity: {
             x: 0,
-            y: random(2, 10)
+            y: random(3, 10)
         },
         size: random(15, 40),
         hue: random(0, 360),
     };
-    return confetti;
+    return firework;
 }
 /**
- * move that confetti, and also show it ig
+ * move that firework, and also show it ig
 */
 function draw() {
-    background("#91daef")
+    background("#000000")
 
-    // draw that confetti
-    for (let confetti of confettis) {
-        moveConfetti(confetti);
-        drawConfetti(confetti);
+    // draw that firework
+    for (let firework of fireworks) {
+        moveFirework(firework);
+        drawFirework(firework);
 
 
     }
 }
 
-// move your confetti
-function moveConfetti(confetti) {
-    confetti.x += confetti.velocity.x;
-    confetti.y += confetti.velocity.y;
+// move your firework
+function moveFirework(firework) {
+    firework.x += firework.velocity.x;
+    firework.y += firework.velocity.y;
 }
 
-function drawConfetti(confetti) {
+function drawFirework(firework) {
     push();
     noStroke();
     colorMode(HSB)
-    fill(confetti.hue, 100, 100);
-    ellipse(confetti.x, confetti.y, confetti.size);
+    fill(firework.hue, 100, 100);
+    ellipse(firework.x, firework.y, firework.size);
     pop();
 
 }
