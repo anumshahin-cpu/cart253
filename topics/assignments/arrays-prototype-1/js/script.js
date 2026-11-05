@@ -9,7 +9,7 @@
 "use strict";
 
 // the confetti
-let confetti = [];
+let confettis = [];
 
 // time between falling confetti
 const minimumConfettiDelay = 1 * 1000;
@@ -31,12 +31,35 @@ function setup() {
 function addConfetti() {
     // create and add one piece of confetti
     const confetti = createConfetti();
-    confetti.push(confetti);
+    confettis.push(confetti);
 }
 
+
+//confetti creation time
+function createConfetti() {
+    const confetti = {
+        x: random(0, width),
+        y: -100,
+        velocity: {
+            x: 0,
+            y: random(2, 10)
+        },
+        size: random(15, 40),
+        fill: random(r, g, b),
+    };
+    return confetti;
+}
 /**
- * draw the confetti
+ * move that confetti, and also show it ig
 */
 function draw() {
+    background("#91daef")
+
+    // draw that confetti
+    for (let confetti of confettis) {
+        moveConfetti(confetti);
+        drawConfetti(confetti);
+
+    }
 
 }
