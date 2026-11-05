@@ -8,6 +8,14 @@
 
 "use strict";
 
+// the confetti
+let confetti = [];
+
+// time between falling confetti
+const minimumConfettiDelay = 1 * 1000;
+const maximumConfettiDelay = 1 * 1000;
+let confettiDelay = maximumConfettiDelay
+
 /**
  * create the canvas
 */
@@ -18,6 +26,13 @@ function setup() {
 
 }
 
+// add confetti to array
+
+function addConfetti() {
+    // create and add one piece of confetti
+    const confetti = createConfetti();
+    confetti.push(confetti);
+}
 
 /**
  * draw the confetti
