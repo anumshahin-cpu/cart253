@@ -1,23 +1,26 @@
 /**
- * Title of Project
+ * Confetti Explosion
  * Author Name
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Confetti's falling from the sky!
+ * wah
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * create the canvas
 */
 function setup() {
+    createCanvas(600, 600);
+
+    setTimeout(addConfetti, confettiDelay);
 
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * draw the confetti
 */
 function draw() {
 
