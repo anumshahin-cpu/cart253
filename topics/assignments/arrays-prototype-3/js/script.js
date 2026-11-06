@@ -31,6 +31,7 @@ let box = {
     y: 300,
     width: 300,
     height: 80,
+    padding: 20,
     fontSize: 18
 }
 
@@ -57,7 +58,6 @@ function setup() {
 function draw() {
     image(hachiwareImage, 0, 0);
 
-    background("#a5dcff");
 
     //display lyrics
     showDialog();
