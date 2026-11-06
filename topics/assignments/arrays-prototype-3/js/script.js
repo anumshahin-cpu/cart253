@@ -43,7 +43,7 @@ function preload() {
 }
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * create canvas
 */
 function setup() {
     createCanvas(400, 400);
@@ -52,8 +52,24 @@ function setup() {
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * displays hachiware's song
 */
 function draw() {
+    image(hachiwareImage, 0, 0);
 
+    //display lyrics
+    showDialog();
+
+}
+
+// display lyrics in dialog box
+
+function showDialog() {
+    //bg box
+    push();
+    fill(0);
+    stroke(255);
+    strokeWeight(3);
+    rect(box.x, box.y, box.width, box.height);
+    pop();
 }
