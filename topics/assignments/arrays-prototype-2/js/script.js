@@ -1,8 +1,8 @@
 /**
- * Confetti Explosion
+ * Fireworks!!
  * Author Name
  * 
- * Confetti's falling from the sky!
+ * If you click on the screen, you'll see fireworks
  * wah
  */
 
