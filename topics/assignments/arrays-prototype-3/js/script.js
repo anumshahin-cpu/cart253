@@ -57,6 +57,8 @@ function setup() {
 function draw() {
     image(hachiwareImage, 0, 0);
 
+    background("#a5dcff");
+
     //display lyrics
     showDialog();
 
