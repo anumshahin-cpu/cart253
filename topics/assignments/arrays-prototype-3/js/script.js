@@ -72,4 +72,12 @@ function showDialog() {
     strokeWeight(3);
     rect(box.x, box.y, box.width, box.height);
     pop();
+
+
+    // the lyrics
+    push();
+    fill(255);
+    textSize(18);
+    text(lyrics[lyricsIndex], box.x + box.padding, box.y + box.padding, box.width - 2 * box.padding, box.height - 2 * box.padding);
+    pop();
 }
