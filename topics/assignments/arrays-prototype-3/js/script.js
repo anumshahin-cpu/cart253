@@ -34,6 +34,14 @@ let box = {
     fontSize: 18
 }
 
+// hachiware png
+let hachiwareImage = undefined;
+
+// load hachi png
+function preload() {
+    hachiwareImage = loadImage("assets/images/hachiware.png");
+}
+
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
