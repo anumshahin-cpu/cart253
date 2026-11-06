@@ -21,12 +21,24 @@ const lyrics = [
     "Everything's half-dried.",
     "It's bitterly cold!"
 
-]
+];
+
+// parts of the speech on display
+let lyricsIndex = 0;
+// dialog box
+let box = {
+    x: 50,
+    y: 300,
+    width: 300,
+    height: 80,
+    fontSize: 18
+}
 
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
 function setup() {
+    createCanvas(400, 400);
 
 }
 
