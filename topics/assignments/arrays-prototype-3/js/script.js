@@ -83,3 +83,13 @@ function showDialog() {
     text(lyrics[lyricsIndex], box.x + box.padding, box.y + box.padding, box.width - 2 * box.padding, box.height - 2 * box.padding);
     pop();
 }
+
+// click to advance speech
+
+function mousePressed() {
+    // continue lyrics until end
+    if (lyricsIndex < lyrics.length - 1) {
+        // advance line
+        lyricsIndex++;
+    }
+}
