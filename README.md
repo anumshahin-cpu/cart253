@@ -101,3 +101,20 @@ Welcome! This website is to showcase the prototypes and upload the works that de
 [website!](https://anumshahin-cpu.github.io/cart253/topics/assignments/functions-prototype-3/)
 [code!](https://github.com/anumshahin-cpu/cart253/blob/main/topics/assignments/functions-prototype-3/js/script.js)
 
+### Confetti Explosion!
+![image](./images/screenshot%20of%20confetti.png)
+
+[website!](https://anumshahin-cpu.github.io/cart253/topics/assignments/arrays-prototype-1/)
+[code!](https://github.com/anumshahin-cpu/cart253/blob/main/topics/assignments/arrays-prototype-1/js/script.js)
+
+### Fireworks!!
+![image](./images/screenshot%20of%20fireworks.png)
+
+[website!](https://anumshahin-cpu.github.io/cart253/topics/assignments/arrays-prototype-2/)
+[code!](https://github.com/anumshahin-cpu/cart253/blob/main/topics/assignments/arrays-prototype-2/js/script.js)
+
+### Hachiware Song
+![image](./images/screenshot%20of%20hachiware%20song.png)
+
+[website!](https://anumshahin-cpu.github.io/cart253/topics/assignments/arrays-prototype-3/)
+[code!](https://github.com/anumshahin-cpu/cart253/blob/main/topics/assignments/arrays-prototype-3/js/script.js)
