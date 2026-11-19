@@ -1,23 +1,27 @@
 /**
- * Title of Project
- * Author Name
+ * Song of the Stars
+ * Anum Shahin
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * An RPG based on the lore of the kpop band Tomorrow x Together.
+ * Move around with the keys, find the members, and then collect the star.
+ * 
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * create canvas
 */
-function setup() {
+async function setup() {
+    createCanvas();
+
+    await preload();
 
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * draw background and placeholder characters
 */
 function draw() {
 
