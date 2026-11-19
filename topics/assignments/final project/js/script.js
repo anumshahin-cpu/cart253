@@ -19,6 +19,16 @@ const columns = 100;
 
 const backgroundColour = "#203244";
 
+// the player
+const player = {
+    // position and size
+    x: 0,
+    y: 0,
+    size: tileSize,
+    // colour 
+    fill: "#ffffff",
+};
+
 /**
  * create canvas
 */
