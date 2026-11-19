@@ -29,11 +29,13 @@ const player = {
     fill: "#ffffff",
 };
 
+// async function preload (this for later) 
+
 /**
  * create canvas
 */
 async function setup() {
-    createCanvas();
+    createCanvas(tileSize * columns, tileSize * rows);
 
     await preload();
 
@@ -44,5 +46,35 @@ async function setup() {
  * draw placeholder characters
 */
 function draw() {
+    background(backgroundColour);
 
+    // the player
+    push();
+    noStroke();
+    fill(player.fill);
+    rect(player.x, player.y, player.size, player.size);
+    pop();
+
+}
+
+// respond to a keypress
+function keyPressed(event) {
+    // move the player
+    //direction
+    let move = {
+        x: 0,
+        y: 0
+    };
+    if (event.keyCode === RIGHT_ARROW) {
+        move.x = tileSize;
+    }
+    else if (event.keyCode === LEFT_ARROW) {
+        move.x = -tileSize;
+    }
+    else if (event.keyCode === UP_ARROW) {
+        move.y = -tileSize;
+    }
+    else if (event.keyCode === DOWN_ARROW) {
+        move.y = tileSize;
+    }
 }
