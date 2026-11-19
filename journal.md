@@ -56,3 +56,10 @@ This assignment was interesting to do because there was a lot you could do but I
 ![image](./images/screenshot%20of%20confetti.png)
 ![image](./images/screenshot%20of%20fireworks.png)
 ![image](./images/screenshot%20of%20hachiware%20song.png)
+
+
+### November 19 2026: Reflective Journal #1
+
+For the final project I decided to tap into my main interests. There is a k-pop boy group, Tomorrow X Together, that I really like that has a storyline in their music videos and I've always followed along since I was 13, so they're a big part of my youth, and their storyline recently ended and I was so fascinated by their concepts. I thought about making an RPG based on the final part of their story, which I found very meaningful. My plan for the game is to start off as one of the members, and you have to find the other members and add them into your party, the last member is locked and you can't collect him until you collect the others, at the end when you've collected all five of the members and added them to your party, you'll collect a star. I want it to have visual novel elements because I enjoy playing visual novels and I have some experience with making them. Currently, I have only implemented the movement to my canvas, I will soon start making the character pngs and implement those instead. 
+
+![image](./images/screenshot%20of%20final%20project%20first%20prototype.png)
