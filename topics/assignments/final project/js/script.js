@@ -14,8 +14,8 @@
 const tileSize = 32;
 
 // world dimensions
-const rows = 100;
-const columns = 100;
+const rows = 10;
+const columns = 10;
 
 const backgroundColour = "#203244";
 
@@ -26,7 +26,7 @@ const player = {
     y: 0,
     size: tileSize,
     // colour 
-    fill: "#ffffff",
+    fill: "#cbe0f3"
 };
 
 // async function preload (this for later) 
@@ -34,10 +34,10 @@ const player = {
 /**
  * create canvas
 */
-async function setup() {
+function setup() {
     createCanvas(tileSize * columns, tileSize * rows);
 
-    await preload();
+    // await preload();
 
 }
 
@@ -76,5 +76,16 @@ function keyPressed(event) {
     }
     else if (event.keyCode === DOWN_ARROW) {
         move.y = tileSize;
+    }
+
+    if (move.x !== 0 || move.y !== 0) {
+
+        const p = random(0, 100);
+        if (p < 10) {
+            move.y = -move.y;
+        }
+
+        player.x += move.x;
+        player.y += move.y;
     }
 }
