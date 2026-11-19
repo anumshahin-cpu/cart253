@@ -9,6 +9,16 @@
 
 "use strict";
 
+// tile size to determine how movement works
+
+const tileSize = 32;
+
+// world dimensions
+const rows = 100;
+const columns = 100;
+
+const backgroundColour = "#203244";
+
 /**
  * create canvas
 */
@@ -21,7 +31,7 @@ async function setup() {
 
 
 /**
- * draw background and placeholder characters
+ * draw placeholder characters
 */
 function draw() {
 
