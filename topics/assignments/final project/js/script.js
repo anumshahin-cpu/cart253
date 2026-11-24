@@ -26,7 +26,7 @@ const player = {
     y: 0,
     size: tileSize,
     // colour 
-    fill: "#cbe0f3"
+    fill: "#cbe0f3",
 };
 
 // async function preload (this for later) 
