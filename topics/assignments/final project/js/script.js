@@ -19,6 +19,8 @@ const columns = 10;
 
 const backgroundColour = "#203244";
 
+let backgroundMusic = undefined
+
 // the player
 const player = {
     // position and size
@@ -29,18 +31,18 @@ const player = {
     fill: "#cbe0f3",
 };
 
-// async function preload() {
+// add sound
+async function preload() {
+    backgroundMusic = loadSound("./assets/sounds/song-of-the-stars.wav")
+}
 
-// }
 /**
  * create canvas
 */
-function setup() {
+async function setup() {
     createCanvas(tileSize * columns, tileSize * rows);
-
-    // await preload();
-
-
+    // play sound
+    await preload();
 
 }
 
@@ -92,4 +94,9 @@ function keyPressed(event) {
         player.x += move.x;
         player.y += move.y;
     }
+}
+
+// click to play sound 
+function mousePressed() {
+    backgroundMusic.play(true)
 }
