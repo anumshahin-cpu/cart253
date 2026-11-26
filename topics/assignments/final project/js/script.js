@@ -84,12 +84,22 @@ function draw() {
     }
     pop();
 
+    // beomgyu
+    push();
+    noStroke();
+    fill(beomgyu.fill);
+    if (beomgyu.status === "alone") {
+        rect(beomgyu.x, beomgyu.y, beomgyu.size, beomgyu.size);
+    }
+    pop();
+
     // for(let_member of party){
 
     // }
 
     if (dist(yeonjun.x, yeonjun.x, taehyun.x, taehyun.y === 0)) {
         yeonjun.party.push(taehyun);
+        party.unshift(taehyun);
     }
 
 }
