@@ -29,8 +29,9 @@ const player = {
     fill: "#cbe0f3",
 };
 
-// async function preload (this for later) 
+// async function preload() {
 
+// }
 /**
  * create canvas
 */
@@ -38,6 +39,8 @@ function setup() {
     createCanvas(tileSize * columns, tileSize * rows);
 
     // await preload();
+
+
 
 }
 
@@ -59,22 +62,23 @@ function draw() {
 
 // respond to a keypress
 function keyPressed(event) {
+
     // move the player
     //direction
     let move = {
         x: 0,
         y: 0
     };
-    if (event.keyCode === RIGHT_ARROW) {
+    if (event.key === RIGHT_ARROW) {
         move.x = tileSize;
     }
-    else if (event.keyCode === LEFT_ARROW) {
+    else if (event.key === LEFT_ARROW) {
         move.x = -tileSize;
     }
-    else if (event.keyCode === UP_ARROW) {
+    else if (event.key === UP_ARROW) {
         move.y = -tileSize;
     }
-    else if (event.keyCode === DOWN_ARROW) {
+    else if (event.key === DOWN_ARROW) {
         move.y = tileSize;
     }
 
