@@ -23,8 +23,6 @@ const backgroundColour = "#203244";
 
 let backgroundMusic = undefined
 
-const party = [yeonjun]
-
 
 // the player
 const yeonjun = {
@@ -38,23 +36,25 @@ const yeonjun = {
 
 const taehyun = {
     // position and size
-    x: 256,
-    y: 256,
+    x: 32 * 4,
+    y: 32 * 4,
     size: tileSize,
     // colour
     fill: "#146481",
-    status: "alone"
+    // status: "alone"
 }
 
 const beomgyu = {
     // position and size
-    x: 32 * 8,
-    y: 32 * 8,
+    x: 32 * 6,
+    y: 32 * 6,
     size: tileSize,
     // colour
     fill: "#689ac0",
-    status: "alone"
+    // status: "alone"
 }
+
+const party = [yeonjun]
 
 // add sound
 async function preload() {
@@ -82,36 +82,54 @@ function draw() {
     push();
     noStroke();
     fill(yeonjun.fill);
-    rect(yeonjun.x, yeonjun.y, yeonjun.size, yeonjun.size);
+    rect(yeonjun.x, yeonjun.y, tileSize);
     pop();
+
+    // // taehyun
+    // push();
+    // noStroke();
+    // fill(taehyun.fill);
+    // if (taehyun.status === "alone") {
+    //     rect(taehyun.x, taehyun.y, taehyun.size, taehyun.size);
+    // }
+    // pop();
+
+    // // beomgyu
+    // push();
+    // noStroke();
+    // fill(beomgyu.fill);
+    // if (beomgyu.status === "alone") {
+    //     rect(beomgyu.x, beomgyu.y, beomgyu.size, beomgyu.size);
+    // }
+    // pop();
+
+
+
+    // for(let_member of party){
+
+    // }
 
     // taehyun
     push();
     noStroke();
     fill(taehyun.fill);
-    if (taehyun.status === "alone") {
-        rect(taehyun.x, taehyun.y, taehyun.size, taehyun.size);
-    }
+    rect(taehyun.x, taehyun.y, tileSize);
     pop();
 
     // beomgyu
     push();
     noStroke();
     fill(beomgyu.fill);
-    if (beomgyu.status === "alone") {
-        rect(beomgyu.x, beomgyu.y, beomgyu.size, beomgyu.size);
-    }
+    rect(beomgyu.x, beomgyu.y, tileSize);
     pop();
 
-    // for(let_member of party){
-
-    // }
-
-    if (dist(yeonjun.x, yeonjun.x, taehyun.x, taehyun.y === 0)) {
-        yeonjun.party.push(taehyun);
+    if (dist(yeonjun.x, yeonjun.y, taehyun.x, taehyun.y) === 0) {
+        // yeonjun.party.push(taehyun);
         party.unshift(taehyun);
     }
-
+    if (dist(yeonjun.x, yeonjun.y, beomgyu.x, beomgyu.y) === 0) {
+        party.unshift(beomgyu);
+    }
 
 }
 
@@ -152,10 +170,13 @@ function keyPressed(event) {
         if (i === party.length - 1) {
             // move with keyboard
 
+            member.x += move.x;
+            member.y += move.y;
+
         }
         else {
             member.x = party[i + 1].x;
-            member.y[i + 1].y;
+            member.y = party[i + 1].y;
         }
     }
 }
