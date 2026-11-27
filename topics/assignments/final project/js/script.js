@@ -134,49 +134,25 @@ function draw() {
     drawMember(soobin);
 
 
-
-    // // taehyun
-    // push();
-    // noStroke();
-    // fill(taehyun.fill);
-    // rect(taehyun.x, taehyun.y, tileSize);
-    // pop();
-
-    // // beomgyu
-    // push();
-    // noStroke();
-    // fill(beomgyu.fill);
-    // rect(beomgyu.x, beomgyu.y, tileSize);
-    // pop();
-
-    // // huening kai
-    // push();
-    // noStroke();
-    // fill(hueningkai.fill);
-    // rect(hueningkai.x, hueningkai.y, tileSize);
-    // pop();
-
-    // // add members to your party!
-    // if (dist(yeonjun.x, yeonjun.y, taehyun.x, taehyun.y) === 0) {
-    //     party.unshift(taehyun);
-    // }
-    // if (dist(yeonjun.x, yeonjun.y, beomgyu.x, beomgyu.y) === 0) {
-    //     party.unshift(beomgyu);
-    // }
-    // if (dist(yeonjun.x, yeonjun.y, hueningkai.x, hueningkai.y) === 0) {
-    //     party.unshift(hueningkai);
-    // }
+    // add members to your party!
+    if (dist(yeonjun.x, yeonjun.y, taehyun.x, taehyun.y) === 0) {
+        party.unshift(taehyun);
+    }
+    if (dist(yeonjun.x, yeonjun.y, beomgyu.x, beomgyu.y) === 0) {
+        party.unshift(beomgyu);
+    }
+    if (dist(yeonjun.x, yeonjun.y, hueningkai.x, hueningkai.y) === 0) {
+        party.unshift(hueningkai);
+    }
+    if (dist(yeonjun.x, yeonjun.y, soobin.x, soobin.y) === 0) {
+        party.unshift(soobin);
+    }
 
     // add members to your party!
     // if (dist(yeonjun.x, yeonjun.y, member.x, member.y) === 0) {
     //     party.unshift(member);
     // }
-    // if (dist(yeonjun.x, yeonjun.y, beomgyu.x, beomgyu.y) === 0) {
-    //     party.unshift(beomgyu);
-    // }
-    // if (dist(yeonjun.x, yeonjun.y, hueningkai.x, hueningkai.y) === 0) {
-    //     party.unshift(hueningkai);
-    // }
+
 
 
 
@@ -240,7 +216,7 @@ function mousePressed() {
     backgroundMusic.play()
 }
 
-// make a collision
-function checkCollision(object1, object2) {
+// // make a collision
+// function checkCollision(object1, object2) {
 
-}
+// }
