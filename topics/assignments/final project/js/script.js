@@ -36,7 +36,7 @@ const yeonjun = {
 
 const taehyun = {
     // position and size
-    x: 32 * 4,
+    x: 32 * 5,
     y: 32 * 4,
     size: tileSize,
     // colour
@@ -46,8 +46,8 @@ const taehyun = {
 
 const beomgyu = {
     // position and size
-    x: 32 * 6,
-    y: 32 * 6,
+    x: 32 * 18,
+    y: 32 * 9,
     size: tileSize,
     // colour
     fill: "#689ac0",
@@ -56,8 +56,8 @@ const beomgyu = {
 
 const hueningkai = {
     // position and size
-    x: 32 * 10,
-    y: 32 * 10,
+    x: 32 * 2,
+    y: 32 * 15,
     size: tileSize,
     // colour
     fill: "#d4eaf6",
