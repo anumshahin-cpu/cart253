@@ -46,6 +46,16 @@ const taehyun = {
     status: "alone"
 }
 
+const beomgyu = {
+    // position and size
+    x: 32 * 8,
+    y: 32 * 8,
+    size: tileSize,
+    // colour
+    fill: "#689ac0",
+    status: "alone"
+}
+
 // add sound
 async function preload() {
     backgroundMusic = await loadSound("./assets/sounds/song-of-the-stars.wav")
@@ -101,6 +111,7 @@ function draw() {
         yeonjun.party.push(taehyun);
         party.unshift(taehyun);
     }
+
 
 }
 
