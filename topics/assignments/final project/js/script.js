@@ -23,21 +23,20 @@ const backgroundColour = "#203244";
 let backgroundMusic = undefined
 
 // add character variables
-let yeonjun = undefined;
 let taehyun = undefined;
 let beomgyu = undefined;
 let hueningkai = undefined;
 let soobin = undefined;
 
-// // the player
-// const yeonjun = {
-//     // position and size
-//     x: 0,
-//     y: 0,
-//     size: tileSize,
-//     // colour 
-//     fill: "#cbe0f3",
-// };
+// the player
+const yeonjun = {
+    // position and size
+    x: 0,
+    y: 0,
+    size: tileSize,
+    // colour 
+    fill: "#cbe0f3",
+};
 
 // const taehyun = {
 //     // position and size
@@ -92,7 +91,6 @@ async function setup() {
     // play sound
     await preload();
 
-    yeonjun = createMember(0, 0, "#cbe0f3");
     taehyun = createMember(32 * 5, 32 * 4, "#146481");
     beomgyu = createMember(32 * 18, 32 * 9, "#689ac0");
     hueningkai = createMember(32 * 2, 32 * 15, "#d4eaf6");
@@ -103,7 +101,7 @@ async function setup() {
 
 // okay let's try it as a function
 function createMember(x, y, memberColour) {
-    const aMember = {
+    const member = {
         // position and size
         x: x,
         y: y,
@@ -111,6 +109,8 @@ function createMember(x, y, memberColour) {
         // colours
         fill: memberColour,
     }
+
+    return member
 }
 /**
  * draw placeholder characters
@@ -118,21 +118,22 @@ function createMember(x, y, memberColour) {
 function draw() {
     background(backgroundColour);
 
+    // yeonjun
+    push();
+    noStroke();
+    fill(yeonjun.fill);
+    rect(yeonjun.x, yeonjun.y, tileSize);
+    pop();
+
+
     // draw the characters
 
-    drawMember(yeonjun);
     drawMember(taehyun);
     drawMember(beomgyu);
     drawMember(hueningkai);
     drawMember(soobin);
 
 
-    // // yeonjun
-    // push();
-    // noStroke();
-    // fill(yeonjun.fill);
-    // rect(yeonjun.x, yeonjun.y, tileSize);
-    // pop();
 
     // // taehyun
     // push();
@@ -155,16 +156,29 @@ function draw() {
     // rect(hueningkai.x, hueningkai.y, tileSize);
     // pop();
 
+    // // add members to your party!
+    // if (dist(yeonjun.x, yeonjun.y, taehyun.x, taehyun.y) === 0) {
+    //     party.unshift(taehyun);
+    // }
+    // if (dist(yeonjun.x, yeonjun.y, beomgyu.x, beomgyu.y) === 0) {
+    //     party.unshift(beomgyu);
+    // }
+    // if (dist(yeonjun.x, yeonjun.y, hueningkai.x, hueningkai.y) === 0) {
+    //     party.unshift(hueningkai);
+    // }
+
     // add members to your party!
-    if (dist(yeonjun.x, yeonjun.y, taehyun.x, taehyun.y) === 0) {
-        party.unshift(taehyun);
-    }
-    if (dist(yeonjun.x, yeonjun.y, beomgyu.x, beomgyu.y) === 0) {
-        party.unshift(beomgyu);
-    }
-    if (dist(yeonjun.x, yeonjun.y, hueningkai.x, hueningkai.y) === 0) {
-        party.unshift(hueningkai);
-    }
+    // if (dist(yeonjun.x, yeonjun.y, member.x, member.y) === 0) {
+    //     party.unshift(member);
+    // }
+    // if (dist(yeonjun.x, yeonjun.y, beomgyu.x, beomgyu.y) === 0) {
+    //     party.unshift(beomgyu);
+    // }
+    // if (dist(yeonjun.x, yeonjun.y, hueningkai.x, hueningkai.y) === 0) {
+    //     party.unshift(hueningkai);
+    // }
+
+
 
 }
 
@@ -204,18 +218,18 @@ function keyPressed(event) {
     }
 
     for (let i = 0; i < party.length; i++) {
-        const member = party[i];
+        const partyMember = party[i];
 
         // last person
         if (i === party.length - 1) {
             // move with keyboard
-            member.x += move.x;
-            member.y += move.y;
+            partyMember.x += move.x;
+            partyMember.y += move.y;
 
         }
         else {
-            member.x = party[i + 1].x;
-            member.y = party[i + 1].y;
+            partyMember.x = party[i + 1].x;
+            partyMember.y = party[i + 1].y;
         }
     }
 }
