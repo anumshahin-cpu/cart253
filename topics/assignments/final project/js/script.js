@@ -54,6 +54,15 @@ const beomgyu = {
     // status: "alone"
 }
 
+const hueningkai = {
+    // position and size
+    x: 32 * 10,
+    y: 32 * 10,
+    size: tileSize,
+    // colour
+    fill: "#d4eaf6",
+}
+
 const party = [yeonjun]
 
 // add sound
@@ -85,30 +94,6 @@ function draw() {
     rect(yeonjun.x, yeonjun.y, tileSize);
     pop();
 
-    // // taehyun
-    // push();
-    // noStroke();
-    // fill(taehyun.fill);
-    // if (taehyun.status === "alone") {
-    //     rect(taehyun.x, taehyun.y, taehyun.size, taehyun.size);
-    // }
-    // pop();
-
-    // // beomgyu
-    // push();
-    // noStroke();
-    // fill(beomgyu.fill);
-    // if (beomgyu.status === "alone") {
-    //     rect(beomgyu.x, beomgyu.y, beomgyu.size, beomgyu.size);
-    // }
-    // pop();
-
-
-
-    // for(let_member of party){
-
-    // }
-
     // taehyun
     push();
     noStroke();
@@ -123,12 +108,22 @@ function draw() {
     rect(beomgyu.x, beomgyu.y, tileSize);
     pop();
 
+    // huening kai
+    push();
+    noStroke();
+    fill(hueningkai.fill);
+    rect(hueningkai.x, hueningkai.y, tileSize);
+    pop();
+
+    // add members to your party!
     if (dist(yeonjun.x, yeonjun.y, taehyun.x, taehyun.y) === 0) {
-        // yeonjun.party.push(taehyun);
         party.unshift(taehyun);
     }
     if (dist(yeonjun.x, yeonjun.y, beomgyu.x, beomgyu.y) === 0) {
         party.unshift(beomgyu);
+    }
+    if (dist(yeonjun.x, yeonjun.y, hueningkai.x, hueningkai.y) === 0) {
+        party.unshift(hueningkai);
     }
 
 }
@@ -155,12 +150,14 @@ function keyPressed(event) {
         move.y = tileSize;
     }
 
-    if (move.x !== 0 || move.y !== 0) {
+    // if (move.x !== 0 || move.y !== 0) {
 
-        yeonjun.x += move.x;
-        yeonjun.y += move.y;
-        // previousPositions.push(yeonjun.x, yeonjun.y)
-        // taehyun.x = previousPositions[previousPositions.length - 1]
+    //     yeonjun.x += move.x;
+    //     yeonjun.y += move.y;
+    // }
+
+    if (move.x === 0 && move.y === 0) {
+        return;
     }
 
     for (let i = 0; i < party.length; i++) {
@@ -169,7 +166,6 @@ function keyPressed(event) {
         // last person
         if (i === party.length - 1) {
             // move with keyboard
-
             member.x += move.x;
             member.y += move.y;
 
